@@ -1,0 +1,169 @@
+extends lpbase
+
+block content
+  .wrapper
+  .content.brick-fill
+    .contentContainer
+      .contentFrame
+        .page-div
+          .content-header-title Vector Conversion
+          img.right-page-image(src="images/vectorpage_image.png")
+          .content-text
+            | Years of professional experience makes Audrey Design &amp; Print
+            | Studio an excellent choice for high quality vector images with a
+            | quick turnaround. Vector art is required by many commerical
+            | printers and is typically the best art option for consistent
+            | clean results. We can provide you with vector art from a variety
+            | of image sources. Accepted image sources include:
+            ul.list
+              div
+                li.content-listitem Scanned Artwork
+                li.content-listitem Hand Drawn Images
+                li.content-listitem Photographs
+                li.content-listitem Printed Material
+                li.content-listitem
+                  | File Types:
+                  ul.content-listitem
+                    div.sublist-item
+                      li jpeg
+                      li jpg
+                    div.sublist-item
+                      li png
+                      li gif
+                    div.sublist-item
+                      li tiff
+                      li pdf
+                    div.sublist-item
+                      li doc
+                      li psd
+            | Just provide your source image and we will give you a competitive
+            | quote to meet your budget. Vector art files will be saved and sent
+            | to you in AI, EPS, or PDF format. Spot color separation is also
+            | available.
+          .page-break
+        #showTextDiv
+          | &#43; More Information on Raster/Vector Images
+        .textDiv.hidden
+          .content-title What is Vector Conversion?
+          .content-text
+            | Vector conversion is when a raster file is modified or redrawn
+            | into a vector format. A raster image can be redrawn in two ways:
+          ol
+            .content-text
+              li.content-subtitle Using simplified vectors
+              | When an image is converted into vector, the resultant image
+              | will be a simplified version of the original one. Simple
+              | vectorized images are suitable for all processes including
+              | those that require “True Vector”.
+            .content-text
+              li.content-subtitle
+                | Using vectors &amp;#38; gradients
+              | An image created using vectors and gradients may look slightly
+              | different than the original one, but it may not be suitable
+              | for all processes that require 100% vector.
+          .content-title Why do I need Vector Conversion?
+          ol
+            .content-text
+              li.content-subtitle Scalability and Performance
+              | Vector images are best used for logos and illustrations,
+              | technical drawings and other processes that need specialty
+              | signs and printing, engraving and etching. The best thing
+              | about vector image is that a multi-color vector can easily be
+              | converted into a single-color image. Limited colors are often
+              | required in the promotional industry to print logos on items
+              | such as pens, cups, bottles, etc.
+            .content-text
+              li.content-subtitle
+                | Changing an image from CMYK to Spot color
+              | Since most raster images can only be printed in CMYK (or
+              | 4-color process), the colors in your design may not print
+              | exactly as expected. CMYK refers to the four colors of inks
+              | used in commercial printing: cyan, magenta, yellow, and black.
+              | CMYK prints use a blend of these four colors to create a full
+              | color image result.
+              br
+              br
+              | Spot colors are pre-mixed inks that are applied only to the
+              | area assigned for each particular color. This ensures complete
+              | control over the tones of the colors in the final printed
+              | design. If the colors in your design need to be an exact match
+              | to a pre-selected tone, we can convert your raster images to
+              | vector graphics with spot colors.
+          .content-title Raster VS. Vector
+          .content-text
+            img.right-page-content(src="images/VectorPage_Image-01.png")
+            .content-subtitle Raster Images
+            | Raster and Vector are two types of file formats, which have
+            | different applications in the world of design. Raster images,
+            | often called as bitmap images are made of millions of tiny
+            | squares, called pixels. When you zoom a raster image, you will
+            | clearly see the square outlines of each pixel. The images
+            | captured using a camera or scanner are raster images. Examples
+            | of raster files include - jpeg, gif, png etc. Raster image like
+            | a photograph holds a lot of details and are versatile in
+            | designs. However, it becomes pixelated and loses resolution when
+            | zoomed. These files are acceptable for digital publication and
+            | print medium such as books, magazines, and newspapers. Raster
+            | images should be saved in a high DPI setting before using them
+            | on the print medium.
+          .content-text
+            img.right-page-content(src="images/VectorPage_Image-02.png")
+            .content-subtitle Vector Images
+            | A vector image is composed of lines (paths) and shapes which are
+            | digitally composed using mathematical calculations. Such images
+            | are created by combining tiles of different shapes and sizes.
+            | These shapes are called objects, which display one single color
+            | each. If you zoom in on a vector image, it won&apos;t get blurry or
+            | pixelated and maintains consistent image quality. A vector image
+            | can be scaled to any size or resolution and is easy to transmit
+            | over the Internet. Vector graphic can be created with
+            | Illustration software such as Illustrator, CorelDraw, Inkscape,
+            | and more.
+
+        .padded
+          form#message-form
+            
+            .hidden
+              .form-row
+                .form-group
+                  label.form-label(for='requestType') What are you inquiring about?
+                  select.form-input(name='requestType' id='requestType' required) 
+                  option(value='Send A Message' selected) Send A Message
+                .form-group
+                  label.form-label(for='service') What service do you need?
+                  select.form-input(name='service' id='service' required) 
+                    option(value='Vector Conversion' selected) Vector Conversion
+            .content-title Need Vector Conversion?
+            .content-text Send me a message and let me know how I can help.        
+            .form-group
+              .form-row
+                .form-group
+                  label.form-label(for='firstName') First Name
+                  input.form-input(id='firstName', type='text', required)
+                .form-group
+                  label.form-label(for='lastName') Last Name
+                  input.form-input(id='lastName', type='text', required)
+            .form-group
+              .form-row
+                .form-group
+                  label.form-label(for='email') Email
+                  input.form-input(id='email', type='email', required)
+                .form-group
+                  label.form-label(for='messagePhone') Phone
+                  input.form-input(id="messagePhone" name='messagePhone' type='text' placeholder='Please enter a phone number' value='')
+            .form-group
+              label.form-label Preferred Contact Method:
+              .form-radio-row
+                .radio-group
+                  input(type="radio" id="viaemail" name="contactmethod" value="Email" checked)
+                  label.form-label(for="viaemail") Email
+                .radio-group
+                  input(type="radio" id="viaphone" name="contactmethod" value="Phone")
+                  label.form-label(for="viaphone") Phone
+
+            .form-group
+                label.form-label(for='message') Message
+                textarea.form-input(rows="7" id="message" name='message' form='message-form' placeholder='Enter your message here' required)
+            .form-group
+              .button-container
+                button.submitButton.submit.form-button Send Message

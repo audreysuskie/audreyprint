@@ -1,0 +1,72 @@
+.open.sticky-menu Get A Quote
+.quoteDiv
+  form#quoteForm
+    i#close.fa-solid.fa-xmark
+    h1 Request a Quote
+    h2 Please take a moment to fill out the form below to get a quote.
+    hr
+    h2 Send me a quote for the following service:
+    .radio-group
+      .radio-row
+        input.service#print(type='radio', name='service', value='Full Service Printing')
+        label(for='print') Full Service Printing
+      .radio-row
+        input.service#single(type='radio', name='service', value='Single Image Transfers')
+        label(for='single') Single Image Transfers
+      .radio-row
+        input.service#embroidery(type='radio', name='service', value='Embroidery')
+        label(for='embroidery') Embroidery
+      .radio-row
+        input.service#gang(type='radio', name='service', value='Transfer Gang Sheets')
+        label(for='gang') Transfer Gang Sheets
+      .radio-row
+        input.service#graphic(type='radio', name='service', value='Graphic design')
+        label(for='graphic') Graphic Design
+      .radio-row
+        input.service#vector(type='radio', name='service', value='Vector Conversion')
+        label(for='vector') Vector Conversion
+      .radio-row
+        input.service#web(type='radio', name='service', value='Web Page Design')
+        label(for='web') Web Page Design
+      .radio-row
+        input.service#other(type='radio', name='service', value='Other')
+        label(for='other') Other (please describe below)
+    h2 Please describe your project:
+    .form-row
+      textarea#project.form-class(name='project' required)
+    h2 Desired Quantity:
+    .form-row
+      input#quantity.form-class(type='number', name='quantity' required)
+    .form-row#art
+      .form-h2 Will you be providing your own art files?
+      .radio-group
+        .radio-row
+          input#artyes(type='radio', name='art', value='Providing Art')
+          label(for='artyes') Yes
+        .radio-row
+          input#artno(type='radio', name='art', value='Not Providing Art' checked='checked')
+          label(for='artno') No
+    .form-row#garments
+      .form-h2 Will you be providing your own printables/blanks?
+      .radio-group
+        .radio-row
+          input(type='radio', name='garment', value='Providing Blanks')
+          label(for='garmentyes') Yes
+        .radio-row
+          input(type='radio', name='garment', value='Not Providing Blanks' checked='checked')
+          label(for='garmentno') No
+    .form-row
+      h2 Select requested delivery date:
+    .form-row
+      input#delivery.form-class(type='date' required)
+    h2 Contact Info:
+    .form-row
+      input#companyname.form-class(type='text', name='companyname', placeholder='Company Name' autofill='company')
+    .form-row
+      input#firstname.form-class(type='text', name='firstname', placeholder='First Name' autofill='first' required)
+      input#lastname.form-class(type='text', name='lastname', placeholder='Last Name' autofill='last' required)
+    .form-row
+      input#email.form-class(type='email', name='Email', placeholder='Email' autofill='email' required)
+      input#phone.form-class(type='tel', name='Phone', placeholder='Phone Number' autofill='phone' required)
+    .form-row
+      button.submit.btn.btn-primary Send Quote Request

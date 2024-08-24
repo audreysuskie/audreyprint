@@ -1,0 +1,34 @@
+extends base
+
+block content
+  .wrapper
+    .form-content
+      .form-container
+        .content-title Create Account
+        form#form-signup
+          - var obj = JSON.stringify(max).split('customerNumber')[1].replace(/\D/g, "");
+          - var number1 = max.length
+          - const sum = (2100 + number1) + 1;
+          input.form-input(id="customerNumber", type='hidden' value=`${sum}`)
+          .form-row
+            .form-group
+              label.form-label(for='firstName') First Name
+              input.form-input(id="firstName", type='text', required)
+            .form-group
+              label.form-label(for='lastName') Last Name
+              input.form-input(id="lastName", type='text', required)
+          .form-group
+            label.form-label(for='company') Company Name
+            input.form-input(id='company', type='text')
+          .form-group
+            label.form-label(for='email') Email
+            input.form-input(id='email', type='email', required)
+          .form-group
+            label.form-label(for='password') Password 
+              span.small (a minimim of 8 characters is required)
+            input.form-input(id='password', type='password', autocomplete='new-password', required, minlength='8')
+          .form-group
+            label.form-label(for='passwordConfirm') Confirm Password
+            input.form-input(id='passwordConfirm', type='password', autocomplete='new-password', required)
+          .form-group
+            button.submitButton.submit.form-button Create Account

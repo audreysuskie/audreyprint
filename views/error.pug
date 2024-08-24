@@ -1,0 +1,12 @@
+extends lpbase
+
+block content
+  .wrapper
+    .content 
+      .contentContainer
+        .error
+          img.error_img(src="/images/x-icon.png")
+          .error__title
+            h2.heading-secondary.heading-secondary--error Oh no! Something went wrong. 
+          .error__msg= msg + '. Please contact us directly and we will try to help you out the old fashioned way.'
+        

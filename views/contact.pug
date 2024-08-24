@@ -1,0 +1,73 @@
+extends lpbase
+
+block content
+  .wrapper
+  .content.brick-fill
+    .contentContainer
+      .contentFrame
+        .content-header-title Contact Us
+        .content-text We are currently working on an online system for ordering services via our web site. 
+          | In the meantime, please fill out the form below to request a quote or for more information on any of our services. We will respond to your preferred method as soon as possible. Alternately, feel free 
+          | to contact us by calling our office or email. 
+        .contact-row 
+          .content-column
+            .content-title 
+              i.fa-solid.fa-phone
+            .content-column-text (949) 274-1972 
+          .content-column 
+            .content-title
+              i.fa-solid.fa-envelope
+            a.content-column-text(href="mailto:info@adprintstudio.com") info@adprintstudio.com
+        .page-break
+        form#message-form
+          .form-group
+            .form-row
+              .form-group
+                label.form-label(for='requestType') What are you inquiring about?
+                select.form-input(name='requestType' id='requestType' required) 
+                  option(value='' selected) -- Please Select --
+                  option(value='Quote Request') Quote Request
+                  option(value='Order Inquiry') Order Inquiry
+                  option(value='Send A Message') Send A Message
+              .form-group
+                label.form-label(for='service') What service do you need?
+                select.form-input(name='service' id='service' required) 
+                  option(value='' selected) -- Please Select --
+                  option(value='Full Service Printing') Full Service Printing
+                  option(value='Transfer Printing') Transfer Printing
+                  option(value='Graphic Design') Graphic Design
+                  option(value='Vector Conversion') Vector Conversion
+                  option(value='Blank Garments') Blank Garments
+                  option(value='Other') Other
+          .form-group
+            .form-row
+              .form-group
+                label.form-label(for='firstName') First Name
+                input.form-input(id='firstName', type='text', required)
+              .form-group
+                label.form-label(for='lastName') Last Name
+                input.form-input(id='lastName', type='text', required)
+          .form-group
+            .form-row
+              .form-group
+                label.form-label(for='email') Email
+                input.form-input(id='email', type='email', required)
+              .form-group
+                label.form-label(for='messagePhone') Phone
+                input.form-input(id="messagePhone" name='messagePhone' type='text' placeholder='Please enter a phone number' value='')
+          .form-group
+            label.form-label Preferred Contact Method:
+            .form-radio-row
+              .radio-group
+                input(type="radio" id="viaemail" name="contactmethod" value="Email" checked)
+                label.form-label(for="viaemail") Email
+              .radio-group
+                input(type="radio" id="viaphone" name="contactmethod" value="Phone")
+                label.form-label(for="viaphone") Phone
+
+          .form-group
+              label.form-label(for='message') Message
+              textarea.form-input(rows="7" id="message" name='message' form='message-form' placeholder='Enter your message here' required)
+          .form-group
+            .button-container
+              button.submitButton.submit.form-button Send Message

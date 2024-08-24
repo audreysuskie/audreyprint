@@ -1,0 +1,44 @@
+.page-emoji {
+  max-width: 150px;
+  width: 35%;
+  color: white;
+  opacity: 0.55;
+  margin: 20px auto;
+}
+
+.image-row {
+  width: 100%;
+  text-align: center;
+}
+
+.content {
+  width: 100vw;
+  min-height: 85vh;
+  padding: 19vh 6vw 6vh 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  margin: auto;
+  max-width: 1120px;
+  width: 100%;
+  background-color: var(--offblack);
+  border: 1px solid white;
+  padding: 50px;
+  color: white;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.bigger {
+  font-size: 1.7rem;
+  line-height: 140%;
+}

@@ -1,0 +1,21 @@
+extends baseMessage
+
+block content
+  p Date/Time Received: 
+    | 
+    span #{date} at #{time}
+  p Name: 
+    | 
+    span #{firstName} #{lastName}
+  p Email:
+    | 
+    span #{email}
+  p Phone: 
+    | 
+    span #{phone}
+  p Subject:
+    | 
+    span #{requestType} for #{service}
+  p Message:
+  p
+    span #{message}

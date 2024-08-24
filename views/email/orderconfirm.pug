@@ -1,0 +1,16 @@
+extends baseEmail
+
+block content
+  p Hi #{firstName},
+  p This email is to confirm that we have received your order with Audrey Design and Print Studio. 
+  p Please take a moment to complete your profile. The more information you can provide now, the faster we can process your orders moving forward.
+  table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+    tbody
+      tr
+        td(align='center')
+          table(role='presentation', border='0', cellpadding='0', cellspacing='0', align='center')
+            tbody
+              tr
+                td
+                  a(href=`${tokenUrl}`, target='_blank', align='center') View Account
+  p Thanks again for your order. If you have any questions about your order or our services, please don't hesitate to contact us!
