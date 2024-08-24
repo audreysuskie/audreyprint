@@ -51,22 +51,22 @@
       .radio-group
         .radio-row
           input(type='radio', name='garment', value='Providing Blanks')
-          label(for='garmentyes') Yes
+          label(for='garment') Yes
         .radio-row
           input(type='radio', name='garment', value='Not Providing Blanks' checked='checked')
-          label(for='garmentno') No
+          label(for='garment') No
     .form-row
       h2 Select requested delivery date:
     .form-row
       input#delivery.form-class(type='date' required)
     h2 Contact Info:
     .form-row
-      input#companyname.form-class(type='text', name='companyname', placeholder='Company Name' autofill='company')
+      input#companyname.form-class(type='text', name='companyname', placeholder='Company Name' autocomplete='company')
     .form-row
-      input#firstname.form-class(type='text', name='firstname', placeholder='First Name' autofill='first' required)
-      input#lastname.form-class(type='text', name='lastname', placeholder='Last Name' autofill='last' required)
+      input#firstname.form-class(type='text', name='firstname', placeholder='First Name' autocomplete='first' required)
+      input#lastname.form-class(type='text', name='lastname', placeholder='Last Name' autocomplete='last' required)
     .form-row
-      input#email.form-class(type='email', name='Email', placeholder='Email' autofill='email' required)
-      input#phone.form-class(type='tel', name='Phone', placeholder='Phone Number' autofill='phone' required)
+      input#email.form-class(type='email', name='Email', placeholder='Email' autocomplete='email' required)
+      input#phone.form-class(type='tel', name='Phone', placeholder='Phone Number' autocomplete='phone' required)
     .form-row
       button.submit.btn.btn-primary Send Quote Request
