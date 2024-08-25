@@ -1,3 +1,3 @@
 # Audrey Design and Print Studio
 
-Custom Artwork and Garment Printing Services in Huntington Beach, California.
+Custom Garment Printing, Embroidery, and Art Services in Huntington Beach, California.
