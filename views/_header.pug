@@ -1,6 +1,6 @@
 .res-nav
   .res-title Account Links
-  a(href='/temp')
+  a#newLogin(href='/signup')
     .res-link Create an Account
   a(href='/temp')
     .res-link Login to Account
@@ -38,10 +38,20 @@ header
       i.fa-solid.fa-bars
     div(class='header_links')
       div(class='account_links')
-        a(href='/temp')
-          div(class='text_link') Create Account
-        a(href='/temp')
-          div(class='text_link') Login
+        if user
+          if user.role == 'admin'
+            a#newLogin(href='/account')
+              div(class='text_link') Admin Account
+          else
+            a#newLogin(href='/account')
+              div(class='text_link')= user.name.firstName + '\'s Account'
+          a#logout
+            div(class='text_link') Log Out
+        else
+          a#newLogin(href='/signup')
+            div(class='text_link') Create Account
+          a#login(href='/login')
+            div(class='text_link') Login
       nav
         a(href='/temp')
           div(class='nav_link') Embroidery
@@ -66,4 +76,4 @@ header
         a(href='/dtf')
           div(class='nav_link droplink') DTF Info
         a(href='/temp')
-          div(class='nav_link open') Contact
+          div(class='nav_link') Contact

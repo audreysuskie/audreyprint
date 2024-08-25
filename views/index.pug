@@ -1,7 +1,7 @@
 extends newbase
 
 block content
-  .temp-notice
+  #temp-notice
     .temp-content
       i#close-temp.fa-solid.fa-xmark
       h1.center Our site is in the final stages of development
@@ -67,7 +67,8 @@ block content
           .title Order Online
           .text.center
             | To order transfers or services online, you will need to create an account. Once your account is created, you will be able upload artwork and provide job specs with our online order form.
-          .column-link Create an Account
+          a(href='/signup')
+            .column-link Create an Account
         .column
           .circle 2
           .title Email Us

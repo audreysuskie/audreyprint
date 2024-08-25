@@ -169,7 +169,7 @@ if (quoteRequest) {
     const firstName = document.getElementById('firstname').value;
     const lastName = document.getElementById('lastname').value;
     const company = document.getElementById('companyname').value;
-    const email = document.getElementById('email').value;
+    const email = document.getElementById('quoteemail').value;
     const phone = document.getElementById('phone').value;
 
     submitQuote(

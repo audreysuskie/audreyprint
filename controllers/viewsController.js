@@ -147,7 +147,7 @@ exports.productPage = catchAsync(async (req, res) => {
 
 exports.profilePage = catchAsync(async (req, res) => {
   const orders = await Order.find({ customerID: req.user.id });
-  res.status(200).render('profile', {
+  res.status(200).render('newtemp', {
     title: 'Your Account',
     orders,
   });

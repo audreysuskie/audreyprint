@@ -1,10 +1,10 @@
-extends lpbase
+extends newbase
 
 block content
   .wrapper
     .form-content
       .form-container
-        .content-title Login To Your Account
+        h1 Login To Your Account
         form#login-form
           .form-group
             label.form-label(for='email') Email address
@@ -14,5 +14,5 @@ block content
             input#password.form-input(type='password', name='password' placeholder='••••••••', required, minlength='8')
           
           .form-group
-            button.submit.form-button Login
+            button.submit.btn.btn-primary Login
             a.form-link-text(href='/forgotpassword') Forgot Password?

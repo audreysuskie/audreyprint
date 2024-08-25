@@ -44,10 +44,10 @@ $(document).ready(function () {
     $('#garments').hide();
   });
 
-  $('.temp-notice').show();
+  $('#temp-notice').fadeIn();
 
   $('#close-temp').click(function () {
-    $('.temp-notice').toggle();
+    $('#temp-notice').fadeOut();
   });
 
   // Navigation Animation

@@ -5,7 +5,7 @@
   --offblack: rgb(25, 25, 28);
 }
 
-.temp-notice {
+#temp-notice {
   position: fixed;
   right: 0;
   top: 0;
@@ -695,6 +695,18 @@ footer {
 }
 
 @media only screen and (max-width: 900px) {
+  .temp-content {
+    position: relative;
+    margin: auto;
+    width: 99vw;
+    max-width: 1000px;
+    background-color: white;
+    border: 2px solid black;
+    color: var(--offblack);
+    padding: 60px 10px 30px 10px;
+    overflow: scroll;
+  }
+
   body {
     background-size: 125%;
   }

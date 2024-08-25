@@ -1,10 +1,10 @@
-extends base
+extends newbase
 
 block content
   .wrapper
     .form-content
       .form-container
-        .content-title Create Account
+        h1 Create an Account
         form#form-signup
           - var obj = JSON.stringify(max).split('customerNumber')[1].replace(/\D/g, "");
           - var number1 = max.length
@@ -31,4 +31,4 @@ block content
             label.form-label(for='passwordConfirm') Confirm Password
             input.form-input(id='passwordConfirm', type='password', autocomplete='new-password', required)
           .form-group
-            button.submitButton.submit.form-button Create Account
+            button.submit.btn.btn-primary Create Account
