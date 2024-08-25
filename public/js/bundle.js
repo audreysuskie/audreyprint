@@ -10842,15 +10842,15 @@
     }
   };
   var inputElement = document.getElementById("phone");
-  var orderInputElement = document.getElementById("orderPhone");
+  var profileInputElement = document.getElementById("user-phone");
   var messageInputElement = document.getElementById("messagePhone");
   if (inputElement) {
     inputElement.addEventListener("keydown", enforceFormat);
     inputElement.addEventListener("keyup", formatToPhone);
   }
-  if (orderInputElement) {
-    orderInputElement.addEventListener("keydown", enforceFormat);
-    orderInputElement.addEventListener("keyup", formatToPhone);
+  if (profileInputElement) {
+    profileInputElement.addEventListener("keydown", enforceFormat);
+    profileInputElement.addEventListener("keyup", formatToPhone);
   }
   if (messageInputElement) {
     messageInputElement.addEventListener("keydown", enforceFormat);

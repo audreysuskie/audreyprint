@@ -61,9 +61,9 @@ block content
               .profile-subcolumns 
                 .profile-column-row
                   label.profile-subtitle(for='name') Name
-                  input.profile-item(id="firstName" name='firstName' type='text' value=`${user.name.firstName}`, required)
+                  input.profile-item(id="firstName" name='firstName' type='text' value=`${user.name.firstName}`,  autocomplete='first', required)
                 .profile-column-row
-                  input.profile-item(id="lastName" name='lastName' type='text' value=`${user.name.lastName}`, required)
+                  input.profile-item(id="lastName" name='lastName' type='text' value=`${user.name.lastName}`,  autocomplete='last', required)
               .profile-row
                 label.profile-subtitle(for='user-email') Email
                 input.profile-item(id="user-email" name='email' type='email' value=`${user.email}`, required)

@@ -419,7 +419,7 @@ const formatToPhone = (event) => {
 };
 
 const inputElement = document.getElementById('phone');
-const orderInputElement = document.getElementById('orderPhone');
+const profileInputElement = document.getElementById('user-phone');
 const messageInputElement = document.getElementById('messagePhone');
 
 if (inputElement) {
@@ -427,9 +427,9 @@ if (inputElement) {
   inputElement.addEventListener('keyup', formatToPhone);
 }
 
-if (orderInputElement) {
-  orderInputElement.addEventListener('keydown', enforceFormat);
-  orderInputElement.addEventListener('keyup', formatToPhone);
+if (profileInputElement) {
+  profileInputElement.addEventListener('keydown', enforceFormat);
+  profileInputElement.addEventListener('keyup', formatToPhone);
 }
 
 if (messageInputElement) {
