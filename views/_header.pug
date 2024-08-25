@@ -4,13 +4,11 @@
     if user.role == 'admin'
       a#newLogin(href='/account')
         .res-link Admin Account
-      a#logout
-        .res-link Log Out
     else
       a#newLogin(href='/account')
         .res-link= user.name.firstName + '\'s Account'
-      a#logout
-        .res-link Log Out
+    a#logout2
+      .res-link Log Out
   else
     a#newLogin(href='/signup')
       .res-link Create an Account
