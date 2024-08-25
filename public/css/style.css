@@ -830,6 +830,13 @@ footer {
 
   #emailRegistration {
     margin: auto;
+    flex-direction: column;
+  }
+
+  .footer-input {
+    flex-grow: 2;
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
   }
 
   .footer-logo {
@@ -841,6 +848,7 @@ footer {
 
   .footer-btn {
     font-size: 0.9rem;
+    border-radius: 0px 0px 5px 5px;
   }
 
   .footer-btn:hover {
