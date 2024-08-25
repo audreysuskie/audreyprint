@@ -31,6 +31,23 @@ $(document).ready(function () {
   $('#close').click(function () {
     $('.quoteDiv').toggle();
     $('#quoteForm').toggle();
+    $('.service').prop('checked', false);
+    $('#project').val('');
+    $('#quantity').val('');
+    $('#delivery').val('');
+    $('#companyname').val('');
+    $('#firstname').val('');
+    $('#lastname').val('');
+    $('#email').val('');
+    $('#phone').val('');
+    $('#art').hide();
+    $('#garments').hide();
+  });
+
+  $('.temp-notice').show();
+
+  $('#close-temp').click(function () {
+    $('.temp-notice').toggle();
   });
 
   // Navigation Animation
