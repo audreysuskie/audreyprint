@@ -1,3 +1,11 @@
+:root {
+  --red: #cc1e17;
+  --darkred: #940e09;
+  --black: rgb(0, 0, 0);
+  --offblack: rgb(25, 25, 28);
+  --offwhite: rgb(170, 170, 170);
+}
+
 .dashboard {
   padding: 50px;
   font-family: 'Roboto', sans-serif;
@@ -78,8 +86,19 @@
   rotate: 180deg;
 }
 
+#editprofile,
+#profile-edit > button {
+  top: 30px;
+  right: 5%;
+}
+
 .account-sections {
   position: relative;
+  padding-top: 25px;
+}
+
+.account-sections h2 {
+  font-size: 2rem;
 }
 
 .profile-col-container {
@@ -96,13 +115,20 @@
 
 .profile-subtitle {
   font-size: 1.2rem;
-  font-weight: 400;
-  color: var(--blue);
+  font-weight: 500;
+  color: white;
   text-transform: uppercase;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.content-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
 }
 
 .profile-item {
@@ -116,16 +142,16 @@
   appearance: none;
   font-size: 1.1rem;
   width: 100%;
-  color: #5280a4a7;
+  color: var(--offwhite);
   font-weight: 300;
   height: 55px;
   line-height: 55px;
-  border-bottom: 1px solid #5280a4a7;
+  border-bottom: 1px solid var(--offwhite);
 }
 
 input.profile-item {
-  color: var(--blue);
-  background-color: cornsilk;
+  color: white;
+  background-color: var(--offblack);
 }
 
 .profile-item-columns {
@@ -164,9 +190,9 @@ input.profile-item {
   padding: 15px;
   font-size: 1.1rem;
   width: 100%;
-  color: #5280a4a7;
+  color: var(--offwhite);
   font-weight: 300;
-  border-bottom: 1px solid #5280a4a7;
+  border-bottom: 1px solid var(--offwhite);
 }
 
 .saved-item-title {
@@ -260,6 +286,11 @@ span.address {
     gap: 0;
   }
 
+  .account-sections h2 {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
   .dashboard-nav {
     flex-direction: row;
   }
@@ -300,7 +331,8 @@ span.address {
 
   #editprofile,
   #profile-edit > button {
-    top: -30px;
+    top: 20px;
+    right: 0;
   }
 
   .dash-nav-item > span {
@@ -315,10 +347,11 @@ span.address {
 
   .profile-col-container {
     justify-content: space-between;
+    flex-direction: column;
   }
 
   .profile-column {
     margin-right: 0px;
-    width: 48%;
+    width: 100%;
   }
 }

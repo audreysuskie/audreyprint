@@ -751,7 +751,7 @@ footer {
 
   .res-nav {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -761,6 +761,7 @@ footer {
     background-color: var(--black);
     border-bottom: 0.4vh solid var(--red);
     font-size: 1.1rem;
+    overflow: hidden;
     overflow-y: scroll;
   }
 

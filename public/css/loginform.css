@@ -183,11 +183,6 @@
   outline: inherit;
 }
 
-#editprofile,
-#profile-edit > button {
-  top: -56px;
-}
-
 .fa-square-check {
   position: relative;
   font-size: 1.4rem;
