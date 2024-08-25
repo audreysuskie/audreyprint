@@ -1,9 +1,21 @@
 .res-nav
   .res-title Account Links
-  a#newLogin(href='/signup')
-    .res-link Create an Account
-  a#login(href='/login')
-    .res-link Login to Account
+  if user
+    if user.role == 'admin'
+      a#newLogin(href='/account')
+        .res-link Admin Account
+      a#logout
+        .res-link Log Out
+    else
+      a#newLogin(href='/account')
+        .res-link= user.name.firstName + '\'s Account'
+      a#logout
+        .res-link Log Out
+  else
+    a#newLogin(href='/signup')
+      .res-link Create an Account
+    a#login(href='/login')
+      .res-link Login to Account
   .res-title Services
   a(href='/temp')
     .res-link Full Service Embroidery

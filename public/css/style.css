@@ -537,6 +537,7 @@ footer {
   height: auto;
   padding: 25px 50px;
   border-top: 0.4vh solid var(--red);
+  margin-top: 2vh;
 }
 
 .footer-container {

@@ -168,12 +168,10 @@
   text-align: center;
 }
 
-#profile-edit > button,
-#shipping-edit > button,
-#billing-edit > button {
+#profile-edit > button {
   position: absolute;
-  top: -28px;
-  right: 0px;
+  top: -40px;
+  right: 5%;
   background: none;
   color: inherit;
   border: none;

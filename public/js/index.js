@@ -252,9 +252,9 @@ if (profileUpdateForm) {
     const city = document.getElementById('city').value;
     const state = document.getElementById('state').value;
     const zip = document.getElementById('zip').value;
-    const phone = document.getElementById('phone').value;
-    const email = document.getElementById('email').value;
-    const company = document.getElementById('company').value;
+    const phone = document.getElementById('user-phone').value;
+    const email = document.getElementById('user-email').value;
+    const company = document.getElementById('user-company').value;
 
     const data = {
       firstName: firstName,
@@ -325,7 +325,7 @@ const userPasswordForm = document.querySelector('.form-user-password');
 if (userPasswordForm) {
   userPasswordForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    document.querySelector('.btn--save-password').textContent = 'Updating...';
+    document.querySelector('.savepassword').textContent = 'Updating...';
 
     const passwordCurrent = document.getElementById('password-current').value;
     const password = document.getElementById('password').value;
@@ -334,7 +334,7 @@ if (userPasswordForm) {
       { passwordCurrent, password, passwordConfirm },
       'password'
     );
-    document.querySelector('.btn--save-password').textContent = 'Save password';
+    document.querySelector('.savepassword').textContent = 'Save New Password';
     document.getElementById('password-current').value = '';
     document.getElementById('password').value = '';
     document.getElementById('password-confirm').value = '';

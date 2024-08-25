@@ -6,20 +6,28 @@
   --offwhite: rgb(170, 170, 170);
 }
 
+.dashboard-container h1 {
+  border-bottom: 3px solid var(--red);
+  padding: 0px 0px 20px 0px;
+}
+
 .dashboard {
   padding: 50px;
-  font-family: 'Roboto', sans-serif;
+  color: white;
+  position: relative;
+  min-height: 300px;
+  width: 100%;
+  background-color: var(--offblack);
 }
 
 .dashboard-container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0px auto;
-  display: grid;
-  grid-template-columns: 25% 75%;
-  gap: 20px 0px;
-  background-color: #fff;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  min-height: 90vh;
+  margin: 0;
+  padding-top: 13vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dashboard-nav {
@@ -86,8 +94,7 @@
   rotate: 180deg;
 }
 
-#editprofile,
-#profile-edit > button {
+#editprofile {
   top: 30px;
   right: 5%;
 }
@@ -147,11 +154,13 @@
   height: 55px;
   line-height: 55px;
   border-bottom: 1px solid var(--offwhite);
+  text-decoration: none;
 }
 
 input.profile-item {
-  color: white;
-  background-color: var(--offblack);
+  color: var(--red);
+  background-color: var(--black);
+  border-bottom: 1px solid var(--red);
 }
 
 .profile-item-columns {
@@ -175,6 +184,7 @@ input.profile-item {
 }
 
 .profile-subcolumns {
+  width: 100%;
   margin: 40px 0px;
   display: flex;
   flex-direction: row;
@@ -184,6 +194,10 @@ input.profile-item {
 
 .profile-column-row {
   line-height: 170%;
+}
+
+.profile-subcolumns .profile-column-row {
+  width: 100%;
 }
 
 .saved-item {
@@ -276,7 +290,7 @@ span.address {
 
 @media only screen and (max-width: 878px) {
   .dashboard {
-    padding: 0px 0px;
+    padding: 10px;
   }
 
   .dashboard-container {
@@ -284,6 +298,10 @@ span.address {
     flex-direction: column;
     align-items: center;
     gap: 0;
+  }
+
+  .dashboard-container h1 {
+    text-align: left;
   }
 
   .account-sections h2 {
@@ -329,9 +347,13 @@ span.address {
     margin-right: 0px;
   }
 
-  #editprofile,
-  #profile-edit > button {
+  #editprofile {
     top: 20px;
+    right: 0;
+  }
+
+  #profile-edit > button {
+    top: -30px;
     right: 0;
   }
 
