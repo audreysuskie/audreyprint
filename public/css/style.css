@@ -171,7 +171,7 @@ nav {
 .nav_link {
   color: white;
   padding: 0px 25px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .nav_link:hover {
@@ -246,7 +246,7 @@ nav {
 .text_link {
   color: white;
   padding: 0px 25px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-size: 0.8rem;
 }
 
