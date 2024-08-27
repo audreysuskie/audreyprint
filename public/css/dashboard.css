@@ -61,7 +61,7 @@
   font-size: 1.8rem;
   margin: 60px 0px;
   transition: 0.25s;
-  color: var(--red);
+  color: white;
   transition: 0.2s;
 }
 
@@ -70,12 +70,13 @@
 }
 
 .dashboard-menu .fa-angles-right:hover {
+  color: var(--red);
   cursor: pointer;
   scale: 1.2;
 }
 
 .dashboard-menu-item {
-  color: var(--red);
+  color: white;
   cursor: pointer;
   padding: 30px 10px 30px 0px;
   text-wrap: nowrap;
@@ -83,7 +84,7 @@
 }
 
 .dashboard-menu-item:hover {
-  color: white;
+  color: var(--red);
   scale: 1.1;
 }
 
