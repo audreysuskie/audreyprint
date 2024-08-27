@@ -212,6 +212,10 @@ const logOutBtn2 = document.getElementById('logout2');
 
 if (logOutBtn2) logOutBtn2.addEventListener('click', logout);
 
+const logOutBtn3 = document.getElementById('logout3');
+
+if (logOutBtn3) logOutBtn3.addEventListener('click', logout);
+
 // Signup
 
 const signup = document.getElementById('form-signup');

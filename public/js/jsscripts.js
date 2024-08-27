@@ -112,4 +112,11 @@ $(document).ready(function () {
       $(this).attr('src', 'images/mailto_icon.png');
     }
   );
+
+  $('.dashboard-menu-item span').hide();
+
+  $('#dash-menu').click(function () {
+    $('.dashboard-menu-item span').toggle();
+    $('#dash-menu').toggleClass('rotate180');
+  });
 });
