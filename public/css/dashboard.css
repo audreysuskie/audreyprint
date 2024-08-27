@@ -88,10 +88,6 @@
   scale: 1.1;
 }
 
-.dashboard-menu-item:first-of-type {
-  padding-top: 10px;
-}
-
 .last {
   border-top: 1px solid var(--lightblack);
   margin: 60px 0px 0px 0px;
