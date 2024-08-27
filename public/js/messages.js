@@ -58,8 +58,17 @@ export const emailReg = async (date, time, email) => {
         location.reload(true);
       }, 1500);
     }
+    if (res.data.status === 'fail') {
+      showAlert('error', res.data.message);
+      window.setTimeout(() => {
+        location.reload(true);
+      }, 1500);
+    }
   } catch (err) {
-    showAlert('error', err.res.message);
+    showAlert(
+      'error',
+      'The email you entered is already registered to an account. Please try another email.'
+    );
   }
 };
 

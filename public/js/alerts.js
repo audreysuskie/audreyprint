@@ -7,7 +7,7 @@ export const showAlert = (type, msg, time = 6) => {
   hideAlert();
   const markup = `<div class="alert-container"><div class="alert alert--${type}">${msg}</div></div>`;
   document.querySelector('body').insertAdjacentHTML('afterbegin', markup);
-  window.setTimeout(hideAlert, time * 1000);
+  window.setTimeout(hideAlert, time * 600);
 };
 
 export const showConfirm = (type, msg, result) => {

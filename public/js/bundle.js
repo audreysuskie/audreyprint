@@ -10283,7 +10283,7 @@
     hideAlert();
     const markup = `<div class="alert-container"><div class="alert alert--${type}">${msg}</div></div>`;
     document.querySelector("body").insertAdjacentHTML("afterbegin", markup);
-    window.setTimeout(hideAlert, time * 1e3);
+    window.setTimeout(hideAlert, time * 600);
   };
 
   // public/js/login.js
@@ -10349,7 +10349,10 @@
         }, 1500);
       }
     } catch (err) {
-      showAlert("error", err.res.data.message);
+      showAlert(
+        "error",
+        "The email you entered is already registered to an account. Please try another email."
+      );
     }
   };
 
@@ -10479,8 +10482,17 @@
           location.reload(true);
         }, 1500);
       }
+      if (res.data.status === "fail") {
+        showAlert("error", res.data.message);
+        window.setTimeout(() => {
+          location.reload(true);
+        }, 1500);
+      }
     } catch (err) {
-      showAlert("error", err.res.data.message);
+      showAlert(
+        "error",
+        "The email you entered is already registered to an account. Please try another email."
+      );
     }
   };
   var submitQuote = async (date, time, service, description, quantity, deliveryDate, artFiles, garments, company, firstName, lastName, email, phone) => {

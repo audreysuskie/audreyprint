@@ -32,6 +32,9 @@ export const createaccount = async (
       }, 1500);
     }
   } catch (err) {
-    showAlert('error', err.res.data.message);
+    showAlert(
+      'error',
+      'The email you entered is already registered to an account. Please try another email.'
+    );
   }
 };

@@ -7,7 +7,6 @@ const handleCastErrorDB = (err) => {
 
 const handleDuplicateFieldsDB = (err) => {
   const message = `The email you entered is already registered to an account. Please try another email.`;
-  console.log(message);
   return new AppError(message, 400);
 };
 
