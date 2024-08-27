@@ -59,7 +59,7 @@ export const emailReg = async (date, time, email) => {
       }, 1500);
     }
   } catch (err) {
-    showAlert('error', err.res.data.message);
+    showAlert('error', err.res.message);
   }
 };
 
