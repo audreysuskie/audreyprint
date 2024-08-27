@@ -1,0 +1,11 @@
+extends baseEmail
+
+block content
+  p Thank you for registering to receive updates from Audrey Design &#38; Print Studio. 
+  p You will be one of the first to know when our website is fully functional. In the future, you will also receive updates on new services and specials. 
+  p.text-center The email you registered with is: #{email} 
+  p If you did not submit this request, please email us at 
+    span 
+      a(href='mailto:admin@audreyprint.com') admin@audreyprint.com
+      |  to be removed from our mailing list.
+  p Thanks again for registering your email with us. If you have any questions about our services, please don't hesitate to contact us!

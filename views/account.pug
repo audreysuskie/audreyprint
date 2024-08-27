@@ -1,9 +1,11 @@
 extends newbase
 
 block content
-  .dashboard-container
-    .dashboard
-      .container
+  .page-container
+    .dashboard-container
+      .dashboard-menu
+        i.fa-solid.fa-bars
+      .dashboard
         if user.role == 'admin'
           h1 Admin Dashboard
         else

@@ -6,21 +6,7 @@
   --offwhite: rgb(170, 170, 170);
 }
 
-.dashboard-container h1 {
-  border-bottom: 3px solid var(--red);
-  padding: 0px 0px 20px 0px;
-}
-
-.dashboard {
-  padding: 50px;
-  color: white;
-  position: relative;
-  min-height: 300px;
-  width: 100%;
-  background-color: var(--offblack);
-}
-
-.dashboard-container {
+.page-container {
   width: 100%;
   min-height: 90vh;
   margin: 0;
@@ -28,6 +14,52 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.dashboard-container {
+  position: relative;
+  padding: 50px;
+  color: white;
+  position: relative;
+  min-height: 300px;
+  width: 100%;
+  background-color: var(--offblack);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.dashboard {
+  position: relative;
+  max-width: 1000px;
+  flex-grow: 3;
+  min-height: 320px;
+}
+
+.dashboard-menu {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  max-width: 80px;
+  height: 100%;
+  border-right: 3px solid var(--red);
+  margin-right: 40px;
+}
+
+.dashboard-menu .fa-bars {
+  font-size: 2.5rem;
+  margin-top: 0.3rem;
+  transition: 0.25s;
+}
+
+.dashboard-menu .fa-bars:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+
+.dashnav-container {
+  position: relative;
 }
 
 .dashboard-nav {
@@ -66,11 +98,6 @@
 .active {
   color: var(--red);
   border-left: 4px solid var(--red);
-}
-
-.dashboard-content {
-  border-left: 2px solid var(--light);
-  padding: 80px 40px;
 }
 
 .fa-pen-to-square {
@@ -131,11 +158,19 @@
   justify-content: space-between;
 }
 
+.form-user-password .profile-subtitle {
+  margin-bottom: 8px;
+}
+
 .content-subtitle {
   font-size: 1.2rem;
   font-weight: 500;
   color: white;
   text-transform: uppercase;
+}
+
+details .content-subtitle {
+  font-size: 1.5rem;
 }
 
 .profile-item {
@@ -200,151 +235,18 @@ input.profile-item {
   width: 100%;
 }
 
-.saved-item {
-  padding: 15px;
-  font-size: 1.1rem;
-  width: 100%;
-  color: var(--offwhite);
-  font-weight: 300;
-  border-bottom: 1px solid var(--offwhite);
-}
-
-.saved-item-title {
-  font-size: 1.3rem;
-  font-weight: 400;
-  line-height: 180%;
-}
-
 span.address {
   margin-right: 10px;
 }
 
-#orders-table {
-  width: 100%;
-  background-color: none;
-  margin: 20px 0px;
-  border-spacing: 0px;
-  font-size: 0.8rem;
-}
-
-#orders-table tr {
-  background-color: #fff;
-  height: 45px;
-}
-
-#orders-table tr:nth-of-type(odd) {
-  background-color: #e9f2f9;
-}
-
-#orders-table td {
-  font-weight: 300;
-  padding: 4px;
-  vertical-align: top;
-  line-height: 140%;
-  text-align: center;
-  vertical-align: middle;
-  color: var(--darkblue);
-}
-
-#orders-table td a {
-  font-weight: 400;
-}
-
-#orders-table td a:hover {
-  text-decoration: underline;
-  color: var(--aquablue);
-}
-
-.table-text {
-  margin: 0;
-  color: black;
-  text-align: left;
-  margin-left: 5px;
-  font-weight: 300;
-}
-
-.table-title {
-  color: var(--medblue);
-  text-align: left;
-  margin: 0px;
-  font-weight: 400;
-}
-
-#orders-table th {
-  background-color: #729ab9;
-  color: white;
-  font-weight: 500;
-  padding: 6px 0px;
-  text-align: center;
-  font-size: 0.8rem;
-}
-
-#orders-table tr:first-of-type {
-  padding: 10px 4px 0px 4px;
-}
-
-.table-col {
-  width: 3%;
-  min-width: 32px;
-}
-
 @media only screen and (max-width: 878px) {
-  .dashboard {
-    padding: 10px;
-  }
-
-  .dashboard-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-  }
-
-  .dashboard-container h1 {
-    text-align: left;
-  }
-
   .account-sections h2 {
     font-size: 1.5rem;
     text-align: left;
   }
 
-  .dashboard-nav {
-    flex-direction: row;
-  }
-
-  .dashboard-content {
-    width: 100%;
-    border-left: 0;
-    padding: 20px 10px;
-  }
-
   .account-sections {
     width: 100%;
-  }
-
-  .dash-nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border-left: 0px;
-    border-bottom: 4px solid #fff;
-    height: 70px;
-    width: 16.66%;
-    text-align: center;
-    font-size: 1.2rem;
-  }
-
-  .dash-nav-item:last-of-type {
-    height: 70px;
-    border-bottom: 4px solid #fff;
-    border-left: 0px;
-  }
-
-  .dash-nav-item > .fa-solid {
-    margin-right: 0px;
   }
 
   #editprofile {
@@ -355,16 +257,6 @@ span.address {
   #profile-edit > button {
     top: -30px;
     right: 0;
-  }
-
-  .dash-nav-item > span {
-    font-size: 0.6rem;
-    margin-top: 5px;
-  }
-
-  .dash-nav-item:hover {
-    border-left: 0px;
-    border-bottom: 4px solid var(--red);
   }
 
   .profile-col-container {

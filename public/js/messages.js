@@ -53,7 +53,7 @@ export const emailReg = async (date, time, email) => {
     });
 
     if (res.data.status === 'success') {
-      showAlert('success', 'Thank you for registering your email!');
+      showAlert('success', 'Thank you for registering for updates.');
       window.setTimeout(() => {
         location.reload(true);
       }, 1500);

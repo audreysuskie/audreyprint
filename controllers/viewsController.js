@@ -15,7 +15,7 @@ exports.alerts = (req, res, next) => {
 };
 
 exports.checkEmail = (req, res) => {
-  res.status(200).render('email/welcome');
+  res.status(200).render('email/registration');
 };
 
 exports.tempPage = catchAsync(async (req, res) => {

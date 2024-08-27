@@ -18,7 +18,7 @@ export const updateSettings = async (data, type) => {
       const dataType = type;
       const dataType2 = dataType.charAt(0).toUpperCase() + dataType.slice(1);
 
-      showAlert('success', `${dataType2} updated successfully!`);
+      showAlert('success', `${dataType2} updated successfully.`);
       console.log(res);
       window.setTimeout(() => {
         window.location.reload(true);

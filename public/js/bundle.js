@@ -10322,7 +10322,7 @@
         }, 1e3);
       }
     } catch (err) {
-      console.log("error", "Error logging out. Please try again");
+      console.log("error", "Error logging out. Please try again.");
     }
   };
 
@@ -10365,7 +10365,7 @@
       if (res.data.status === "success") {
         const dataType = type;
         const dataType2 = dataType.charAt(0).toUpperCase() + dataType.slice(1);
-        showAlert("success", `${dataType2} updated successfully!`);
+        showAlert("success", `${dataType2} updated successfully.`);
         console.log(res);
         window.setTimeout(() => {
           window.location.reload(true);
@@ -10474,7 +10474,7 @@
         }
       });
       if (res.data.status === "success") {
-        showAlert("success", "Thank you for registering your email!");
+        showAlert("success", "Thank you for registering for updates.");
         window.setTimeout(() => {
           location.reload(true);
         }, 1500);
