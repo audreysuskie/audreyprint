@@ -4,22 +4,7 @@ block content
   .page-container
     .dashboard-container
       .dash-wrap
-        .dashboard-menu
-          .dashboard-menu-items
-            .dashboard-menu-link
-              i#dash-menu.fa-solid.fa-angles-right
-            .dashboard-menu-item
-              i.fa-solid.fa-gear
-              span Profile Settings
-            .dashboard-menu-item
-              i.fa-solid.fa-receipt
-              span Place An Order
-            .dashboard-menu-item
-              i.fa-solid.fa-list
-              span Order History
-          a#logout3.dashboard-menu-item.last
-            i.fa-solid.fa-right-from-bracket
-            span Log Out
+        include _dashboardnav
         .dashboard
           if user.role == 'admin'
             h1 Admin Dashboard

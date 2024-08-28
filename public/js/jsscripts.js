@@ -118,5 +118,7 @@ $(document).ready(function () {
   $('#dash-menu').click(function () {
     $('.dashboard-menu-item span').toggle();
     $('#dash-menu').toggleClass('rotate180');
+    $('.dashboard-menu-item').toggleClass('center');
+    $('.dashboard-menu-item').toggleClass('left');
   });
 });

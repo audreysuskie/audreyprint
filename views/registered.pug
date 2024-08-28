@@ -1,0 +1,25 @@
+extends newbase
+
+block content
+  .page-container
+    .dashboard-container
+      .dash-wrap
+        include _dashboardnav
+        .dashboard
+          #profile.account-sections
+            h1 Registered Emails
+            table#email-table
+              tr 
+                th Date
+                th Time
+                th Email
+                if emails.length == 0
+                  tr
+                    td(colspan='13')
+                      .profile-item No registered emails to display.
+                else 
+                  each regemail in emails
+                    tr 
+                      td= regemail.date
+                      td= regemail.time
+                      td= regemail.email

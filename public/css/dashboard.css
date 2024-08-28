@@ -37,7 +37,6 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-  padding: 0px 40px;
 }
 
 .dashboard {
@@ -45,14 +44,13 @@
   width: 100%;
   min-height: 320px;
   padding: 50px 20px 50px 40px;
+  border-left: 3px solid var(--red);
 }
 
 .dashboard-menu {
   position: relative;
   min-height: 100%;
   width: fit-content;
-  border-right: 3px solid var(--red);
-  padding: 0px 40px 0px 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -60,14 +58,21 @@
 
 .dashboard-menu .fa-angles-right {
   font-size: 1.8rem;
-  margin: 60px 0px;
   transition: 0.25s;
-  color: white;
+  color: var(--red);
   transition: 0.2s;
 }
 
 .rotate180 {
   rotate: 180deg;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
 }
 
 .dashboard-menu .fa-angles-right:hover {
@@ -76,28 +81,34 @@
   scale: 1.2;
 }
 
+.dashboard-menu-link {
+  color: white;
+  cursor: pointer;
+  padding: 30px 40px;
+  text-wrap: nowrap;
+  font-size: 1.35rem;
+}
+
 .dashboard-menu-item {
   color: white;
   cursor: pointer;
-  padding: 30px 10px 30px 0px;
+  padding: 30px 40px;
   text-wrap: nowrap;
   font-size: 1.35rem;
 }
 
 .dashboard-menu-item:hover {
   color: var(--red);
-  scale: 1.1;
 }
 
 .last {
   border-top: 1px solid var(--lightblack);
   margin: 60px 0px 0px 0px;
-  padding: 30px 10px 30px 0px;
+  padding: 30px 40px;
 }
 
 .dashboard-menu-item span {
-  color: white;
-  margin-left: 15px;
+  margin-left: 20px;
   font-size: 1.1rem;
 }
 
@@ -280,6 +291,52 @@ input.profile-item {
 
 span.address {
   margin-right: 10px;
+}
+
+.quote-request {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 20px;
+}
+
+.quote-request h3 {
+  font-weight: 400;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+.quote-request h3 p {
+  font-weight: 300;
+  color: var(--offwhite);
+  margin-block-start: 0em;
+  margin-block-end: 1em;
+}
+
+#email-table,
+#orders-table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#email-table th,
+#orders-table th {
+  padding: 5px;
+  text-align: left;
+  font-weight: 500;
+  color: var(--offwhite);
+}
+
+#email-table tr,
+#orders-table tr {
+  border-color: var(--offwhite);
+  border-bottom: 2px solid var(--red);
+}
+
+#email-table td,
+#orders-table td {
+  padding: 10px 5px;
+  width: fit-content;
+  vertical-align: top;
 }
 
 @media only screen and (max-width: 878px) {

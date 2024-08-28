@@ -70,13 +70,14 @@ router.get(
   authController.restrictTo('admin', 'user'),
   viewsController.savedPage
 );
-router.get(
-  '/orders',
-  authController.isLoggedIn,
-  authController.protect,
-  authController.restrictTo('admin', 'user'),
-  viewsController.ordersPage
-);
+
+// router.get(
+//   '/orders',
+//   authController.isLoggedIn,
+//   authController.protect,
+//   authController.restrictTo('admin', 'user'),
+//   viewsController.ordersPage
+// );
 
 router.get(
   '/account',
@@ -114,6 +115,36 @@ router.get(
   authController.protect,
   authController.restrictTo('admin'),
   viewsController.allUsers
+);
+
+router.get(
+  '/useremails',
+  authController.isLoggedIn,
+  authController.protect,
+  authController.restrictTo('admin'),
+  viewsController.allRegistered
+);
+
+router.get(
+  '/quotereq',
+  authController.isLoggedIn,
+  authController.protect,
+  authController.restrictTo('admin'),
+  viewsController.quoteRequests
+);
+
+router.get(
+  '/order',
+  authController.isLoggedIn,
+  authController.protect,
+  viewsController.placeOrder
+);
+
+router.get(
+  '/orderhistory',
+  authController.isLoggedIn,
+  authController.protect,
+  viewsController.orderHistory
 );
 
 router.get('/orders/:id', viewsController.printOrderPage);

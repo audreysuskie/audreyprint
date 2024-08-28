@@ -1,0 +1,41 @@
+extends newbase
+
+block content
+  .page-container
+    .dashboard-container
+      .dash-wrap
+        include _dashboardnav
+        .dashboard
+          #profile.account-sections
+            h1 Quote Requests
+            if requests.length == 0
+              .profile-item No quote requests to display.
+            else 
+              each request in requests
+                .quote-request
+                  h3 Date: 
+                    p= request.date
+                  h3 Time: 
+                    p= request.time
+                  h3 Company Name: 
+                    p= request.company
+                  h3 Name:
+                    p= request.firstName + " " + request.lastName
+                  h3 Phone: 
+                    p= request.phone
+                  h3 Email:
+                    p= request.email
+                  h3 Service: 
+                    p= request.service
+                  h3 Job Description: 
+                    p= request.description
+                  h3 Quantity: 
+                    p= request.quantity
+                  h3 Requested Delivery Date: 
+                    p= request.deliveryDate
+                  h3 Art Files: 
+                    p= request.artFiles
+                  h3 Garments: 
+                    p= request.garments
+                hr
+                

@@ -1,0 +1,39 @@
+extends newbase
+
+block content
+  .page-container
+    .dashboard-container
+      .dash-wrap
+        include _dashboardnav
+        .dashboard
+          #profile.account-sections
+            h1 User Accounts
+            table#orders-table
+              tr 
+                th Cust#
+                th Name
+                th Company
+                th Address
+                th Phone
+                th Email
+                if users.length == 0
+                  tr
+                    td(colspan='13')
+                      .profile-item No users to display.
+                else 
+                  each user in users
+                    tr 
+                      td= user.customerNumber
+                      td= user.name.firstName + ' ' + user.name.lastName
+                      td= user.company
+                      td
+                        .table-title Street:
+                          span.table-text= user.address.street1
+                        .table-title City:
+                          span.table-text= user.address.city
+                        .table-title State:
+                          span.table-text= user.address.state
+                        .table-title Zip:
+                          span.table-text= user.address.zip
+                      td= user.phone
+                      td= user.email

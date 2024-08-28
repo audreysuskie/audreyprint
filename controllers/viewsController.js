@@ -2,6 +2,8 @@ const User = require('../models/userModel');
 const Product = require('../models/productModel');
 const Message = require('../models/messageModel');
 const Order = require('../models/orderModel');
+const Registration = require('../models/registrationModel');
+const Request = require('../models/quoterequestModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const { request } = require('express');
@@ -68,16 +70,6 @@ exports.shippingPage = catchAsync(async (req, res) => {
 exports.savedPage = catchAsync(async (req, res) => {
   res.status(200).render('saved', {
     title: 'Saved Items',
-  });
-});
-
-exports.ordersPage = catchAsync(async (req, res) => {
-  const orders = await Order.find({ customerID: req.user.id }).sort({
-    orderDate: -1,
-  });
-  res.status(200).render('orders', {
-    title: 'Your Orders',
-    orders,
   });
 });
 
@@ -295,5 +287,37 @@ exports.allUsers = catchAsync(async (req, res) => {
   res.status(200).render('allusers', {
     title: 'All Users',
     users,
+  });
+});
+
+exports.allRegistered = catchAsync(async (req, res) => {
+  const emails = await Registration.find();
+  res.status(200).render('registered', {
+    title: 'Registered Emails',
+    emails,
+  });
+});
+
+exports.quoteRequests = catchAsync(async (req, res) => {
+  const requests = await Request.find();
+  res.status(200).render('quoterequests', {
+    title: 'Quote Requests',
+    requests,
+  });
+});
+
+exports.placeOrder = catchAsync(async (req, res) => {
+  res.status(200).render('orderpage', {
+    title: 'Place An Order',
+  });
+});
+
+exports.orderHistory = catchAsync(async (req, res) => {
+  const orders = await Order.find({ customerID: req.user.id }).sort({
+    orderDate: -1,
+  });
+  res.status(200).render('history', {
+    title: 'Your Order History',
+    orders,
   });
 });
