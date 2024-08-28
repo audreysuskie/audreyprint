@@ -43,7 +43,7 @@
   position: relative;
   width: 100%;
   min-height: 320px;
-  padding: 50px 20px 50px 40px;
+  padding: 50px 50px 50px 40px;
   border-left: 3px solid var(--red);
 }
 
