@@ -1314,10 +1314,6 @@ a.footerItem:hover {
     text-transform: uppercase;
   }
 
-  .active {
-    font-weight: 500;
-  }
-
   .headerMenuDiv {
     height: 3px;
     width: 100%;

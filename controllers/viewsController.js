@@ -285,7 +285,7 @@ exports.editorderPage = catchAsync(async (req, res) => {
 exports.allUsers = catchAsync(async (req, res) => {
   const users = await User.find({ role: 'user' });
   res.status(200).render('allusers', {
-    title: 'All Users',
+    title: 'User Accounts',
     users,
   });
 });
@@ -317,7 +317,7 @@ exports.orderHistory = catchAsync(async (req, res) => {
     orderDate: -1,
   });
   res.status(200).render('history', {
-    title: 'Your Order History',
+    title: 'Order History',
     orders,
   });
 });

@@ -6,8 +6,12 @@ block content
       .dash-wrap
         include _dashboardnav
         .dashboard
-          #profile.account-sections
-            h1 Place An Order
+          if user.role == 'admin'
+            h1 Admin Dashboard
+          else
+            h1= `${user.name.firstName}'s Account`
+          .account-sections
+            h2= title
             
             .content-text This page is temporarily unavailable while our site is in the final stages of development. 
               | Thank you for your patience while we work on the finishing touches.  

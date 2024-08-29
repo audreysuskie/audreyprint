@@ -3,7 +3,7 @@
   --darkred: #940e09;
   --black: rgb(0, 0, 0);
   --offblack: rgb(25, 25, 28);
-  --lightblack: rgb(53, 53, 53);
+  --lightblack: rgb(60, 60, 60);
   --offwhite: rgb(170, 170, 170);
 }
 
@@ -47,6 +47,14 @@
   border-left: 3px solid var(--red);
 }
 
+.dashboard h1 {
+  background-color: var(--red);
+  padding: 10px 10px 10px 40px;
+  margin-left: -40px;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
 .dashboard-menu {
   position: relative;
   min-height: 100%;
@@ -56,7 +64,7 @@
   justify-content: space-between;
 }
 
-.dashboard-menu .fa-angles-right {
+.dashboard-menu .fa-angles-left {
   font-size: 1.8rem;
   transition: 0.25s;
   color: var(--red);
@@ -75,14 +83,13 @@
   text-align: center;
 }
 
-.dashboard-menu .fa-angles-right:hover {
+.dashboard-menu .fa-angles-left:hover {
   color: var(--red);
   cursor: pointer;
   scale: 1.2;
 }
 
 .dashboard-menu-link {
-  color: white;
   cursor: pointer;
   padding: 30px 40px;
   text-wrap: nowrap;
@@ -90,7 +97,7 @@
 }
 
 .dashboard-menu-item {
-  color: white;
+  color: var(--offwhite);
   cursor: pointer;
   padding: 30px 40px;
   text-wrap: nowrap;
@@ -102,14 +109,16 @@
 }
 
 .last {
+  color: white;
   border-top: 1px solid var(--lightblack);
   margin: 60px 0px 0px 0px;
   padding: 30px 40px;
 }
 
 .dashboard-menu-item span {
-  margin-left: 20px;
-  font-size: 1.1rem;
+  margin-left: 10px;
+  font-size: 0.9rem;
+  line-height: 100%;
 }
 
 .dashnav-container {
@@ -150,8 +159,8 @@
 }
 
 .active {
-  color: var(--red);
-  border-left: 4px solid var(--red);
+  color: white;
+  font-weight: 600;
 }
 
 .fa-pen-to-square {
@@ -182,11 +191,12 @@
 
 .account-sections {
   position: relative;
-  padding-top: 25px;
+  padding-top: 35px;
 }
 
 .account-sections h2 {
-  font-size: 2rem;
+  font-size: 1.85rem;
+  font-weight: 500;
 }
 
 .profile-col-container {
@@ -297,6 +307,7 @@ span.address {
   display: grid;
   grid-template-columns: auto auto;
   margin-top: 20px;
+  border-bottom: 1px solid var(--lightblack);
 }
 
 .quote-request h3 {
@@ -314,29 +325,33 @@ span.address {
 
 .account-sections table {
   width: 100%;
-  margin-top: 30px;
-  background-color: var(--black);
-  border: 15px solid var(--black);
+  margin-top: 10px;
   border-collapse: collapse;
+  font-size: 0.85rem;
 }
 
 .account-sections table th {
-  padding: 15px;
+  padding: 15px 10px;
   text-align: left;
   font-weight: 500;
   color: var(--offwhite);
+  text-transform: uppercase;
 }
 
 .account-sections table tr {
   border-color: var(--offwhite);
-  border-bottom: 1px solid var(--offwhite);
+}
+
+.account-sections table tr:nth-of-type(even) {
+  background-color: #00000055;
 }
 
 .account-sections table tr:first-of-type {
   border-bottom: 2px solid var(--red);
 }
+
 .account-sections table td {
-  padding: 15px 5px;
+  padding: 15px 10px;
   width: fit-content;
   vertical-align: top;
 }

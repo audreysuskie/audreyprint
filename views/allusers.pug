@@ -6,8 +6,12 @@ block content
       .dash-wrap
         include _dashboardnav
         .dashboard
-          #profile.account-sections
-            h1 User Accounts
+          if user.role == 'admin'
+            h1 Admin Dashboard
+          else
+            h1= `${user.name.firstName}'s Account`
+          .account-sections
+            h2= title
             table#orders-table
               tr 
                 th Cust#

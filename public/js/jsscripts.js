@@ -113,12 +113,23 @@ $(document).ready(function () {
     }
   );
 
-  $('.dashboard-menu-item span').hide();
+  $('.dashboard-menu-item span').show();
 
   $('#dash-menu').click(function () {
     $('.dashboard-menu-item span').toggle();
     $('#dash-menu').toggleClass('rotate180');
     $('.dashboard-menu-item').toggleClass('center');
     $('.dashboard-menu-item').toggleClass('left');
+  });
+
+  const dashlink = $('.dashboard-menu-item');
+  const windowpath = window.location.pathname;
+
+  $(dashlink).each(function () {
+    const linkpath = $(this).attr('href');
+
+    if (windowpath === linkpath) {
+      $(this).addClass('active');
+    }
   });
 });

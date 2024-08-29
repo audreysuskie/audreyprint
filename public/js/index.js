@@ -9,15 +9,6 @@ import { emailReg } from './messages';
 import { submitQuote } from './messages';
 import { showAlert } from './alerts';
 
-// Set Dashboard Nav Items to Active While on Current Page
-const dashboard = document.getElementById('account');
-if (dashboard) {
-  const url = location.pathname.split('/')[1];
-  if ($(`#${url}`).attr('href') == '/' + url) {
-    $(`#${url}`).addClass('active');
-  }
-}
-
 // Get Uploaded Image Size
 const img = document.getElementById('hidden-image');
 const ogfile = document.getElementById('original-size');

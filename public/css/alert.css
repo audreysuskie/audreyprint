@@ -30,7 +30,7 @@
   z-index: 2147483650;
   background-color: white;
   color: var(--offblack);
-  font-weight: 600;
+  font-weight: 500;
   font-size: calc(1vw + 1vh + 1.5vmin);
   text-align: left;
   line-height: 120%;
@@ -38,7 +38,7 @@
 }
 
 .alert--success {
-  border: 2px solid black;
+  border: 2px solid white;
   color: var(--offblack);
 }
 .alert--error {

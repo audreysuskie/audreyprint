@@ -10531,13 +10531,6 @@
   };
 
   // public/js/index.js
-  var dashboard = document.getElementById("account");
-  if (dashboard) {
-    const url = location.pathname.split("/")[1];
-    if ($(`#${url}`).attr("href") == "/" + url) {
-      $(`#${url}`).addClass("active");
-    }
-  }
   var img = document.getElementById("hidden-image");
   var ogfile = document.getElementById("original-size");
   if (ogfile) {

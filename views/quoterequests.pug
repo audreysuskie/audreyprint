@@ -6,8 +6,12 @@ block content
       .dash-wrap
         include _dashboardnav
         .dashboard
-          #profile.account-sections
-            h1 Quote Requests
+          if user.role == 'admin'
+            h1 Admin Dashboard
+          else
+            h1= `${user.name.firstName}'s Account`
+          .account-sections
+            h2= title
             if requests.length == 0
               .profile-item No quote requests to display.
             else 
@@ -37,5 +41,4 @@ block content
                     p= request.artFiles
                   h3 Garments: 
                     p= request.garments
-                hr
                 
