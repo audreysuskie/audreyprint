@@ -312,29 +312,31 @@ span.address {
   margin-block-end: 1em;
 }
 
-#email-table,
-#orders-table {
+.account-sections table {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 30px;
+  background-color: var(--black);
+  border: 15px solid var(--black);
+  border-collapse: collapse;
 }
 
-#email-table th,
-#orders-table th {
-  padding: 5px;
+.account-sections table th {
+  padding: 15px;
   text-align: left;
   font-weight: 500;
   color: var(--offwhite);
 }
 
-#email-table tr,
-#orders-table tr {
+.account-sections table tr {
   border-color: var(--offwhite);
-  border-bottom: 2px solid var(--red);
+  border-bottom: 1px solid var(--offwhite);
 }
 
-#email-table td,
-#orders-table td {
-  padding: 10px 5px;
+.account-sections table tr:first-of-type {
+  border-bottom: 2px solid var(--red);
+}
+.account-sections table td {
+  padding: 15px 5px;
   width: fit-content;
   vertical-align: top;
 }

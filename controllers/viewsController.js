@@ -321,3 +321,22 @@ exports.orderHistory = catchAsync(async (req, res) => {
     orders,
   });
 });
+
+exports.completedOrders = catchAsync(async (req, res) => {
+  const orders = await Order.find({ status: 'Complete' }).sort({
+    orderDate: -1,
+  });
+  res.status(200).render('completedOrders', {
+    title: 'Completed Orders',
+    orders,
+  });
+});
+exports.openOrders = catchAsync(async (req, res) => {
+  const orders = await Order.find({ status: 'Order Placed' }).sort({
+    orderDate: -1,
+  });
+  res.status(200).render('openOrders', {
+    title: 'Open Orders',
+    orders,
+  });
+});

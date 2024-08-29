@@ -3,9 +3,6 @@
     .dashboard-menu-items
       .dashboard-menu-link
         i#dash-menu.fa-solid.fa-angles-right
-      a(href='/account').dashboard-menu-item.center
-        i.fa-solid.fa-gear
-        span Profile Settings
       a(href='/openorders').dashboard-menu-item.center
         i.fa-solid.fa-folder-open
         span Open Orders
@@ -21,19 +18,22 @@
       a(href='/allusers').dashboard-menu-item.center
         i.fa-solid.fa-users
         span User Accounts
+      a(href='/account').dashboard-menu-item.center
+        i.fa-solid.fa-gear
+        span Profile Settings
   else
     .dashboard-menu-items
       .dashboard-menu-link
         i#dash-menu.fa-solid.fa-angles-right
-      a(href='/account').dashboard-menu-item.center
-        i.fa-solid.fa-gear
-        span Profile Settings
       a(href='/order').dashboard-menu-item.center
-        i.fa-solid.fa-receipt
+        i.fa-solid.fa-cart-shopping
         span Place An Order
       a(href='/orderhistory').dashboard-menu-item.center
         i.fa-solid.fa-list
         span Order History
+      a(href='/account').dashboard-menu-item.center
+        i.fa-solid.fa-gear
+        span Profile Settings
   a#logout3.dashboard-menu-item.last.center
     i.fa-solid.fa-right-from-bracket
     span Log Out

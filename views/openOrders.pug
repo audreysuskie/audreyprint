@@ -7,7 +7,7 @@ block content
         include _dashboardnav
         .dashboard
           #profile.account-sections
-            h1= user.name.firstName + '\'s Order History'
+            h1= title
             
             table#history-table
               tr 
@@ -19,7 +19,7 @@ block content
               if orders.length == 0
                 tr
                   td(colspan='4')
-                    .text.center No order history to display.
+                    .text.center No open orders to display.
               else
                 each order in orders
                   tr

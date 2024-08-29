@@ -147,6 +147,20 @@ router.get(
   viewsController.orderHistory
 );
 
+router.get(
+  '/completed',
+  authController.isLoggedIn,
+  authController.protect,
+  viewsController.completedOrders
+);
+
+router.get(
+  '/openorders',
+  authController.isLoggedIn,
+  authController.protect,
+  viewsController.openOrders
+);
+
 router.get('/orders/:id', viewsController.printOrderPage);
 
 router.get('/orderpage', authController.isLoggedIn, viewsController.orderPage);
