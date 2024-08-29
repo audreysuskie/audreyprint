@@ -30,7 +30,6 @@
   width: 70vw;
   max-width: 1000px;
   background-color: white;
-  border: 2px solid black;
   color: var(--offblack);
   padding: 70px 70px 70px 50px;
   overflow: scroll;
