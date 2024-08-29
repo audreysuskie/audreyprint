@@ -1,0 +1,41 @@
+extends baseMessage
+
+block content
+  p Thank you for requesting a quote from Audrey Design &#38; Print Studio. 
+    | We will respond to your request via email as soon as possible. If you have any further questions about our services, please don't hesitate to contact us!
+  p A copy of your quote request is included below.
+  hr
+  .message-title YOUR QUOTE REQUEST
+  .message-text Date/Time Received: 
+    | 
+    span #{date} at #{time}
+  .message-text Company Name: 
+    | 
+    span #{company}
+  .message-text Name: 
+    | 
+    span #{name}
+  .message-text Email:
+    | 
+    span #{email}
+  .message-text Phone: 
+    | 
+    span #{phone}
+  hr
+  .message-text Service Requested: 
+    | 
+    span #{service}
+  .message-text Quantity Requested: 
+    | 
+    span #{quantity}
+  .message-text Delivery Date Requested:
+    |
+    span #{deliveryDate}
+  .message-text Description of Project:
+  .message-text #{description}
+  .message-text Art Files: 
+    | 
+    span #{artFiles}
+  .message-text Garments/Blanks: 
+    | 
+    span #{garments}
