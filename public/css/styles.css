@@ -63,10 +63,6 @@ a {
   font-weight: 400;
 }
 
-.hidden {
-  display: none;
-}
-
 .bold {
   font-family: 'Roboto Flex', sans-serif;
   font-size: 1.1em;
@@ -940,17 +936,6 @@ nav {
 .message-text p span {
   font-weight: 300;
   line-height: 130%;
-}
-
-#showTextDiv {
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: var(--blue);
-}
-
-#showTextDiv:hover {
-  cursor: pointer;
-  color: var(--aquablue);
 }
 
 .contentFrame {

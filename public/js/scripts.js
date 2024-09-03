@@ -37,20 +37,6 @@ $(document).ready(function () {
     $('#editprofile').hide();
   });
 
-  // Hide/Show Text Div
-  $('#showTextDiv').click(function () {
-    $('.textDiv').toggleClass('hidden');
-    if ($('.textDiv').hasClass('hidden')) {
-      $('#showTextDiv').removeClass('padding-bottom');
-      $('#showTextDiv').html('&#43; More Information on Raster/Vector Images');
-    } else {
-      $('#showTextDiv').addClass('padding-bottom');
-      $('#showTextDiv').html(
-        '&#8722; Hide Information on Raster/Vector Images'
-      );
-    }
-  });
-
   // Responsive Menu Controls
   $('#headerMenuLink').click(function () {
     if ($('.headerMenu').hasClass('closed')) {
