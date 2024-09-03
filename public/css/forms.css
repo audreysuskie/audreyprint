@@ -310,7 +310,7 @@ input[type='radio']:checked::before {
 
 #message-form {
   width: 100%;
-  padding: 20px 50px;
+  padding: 30px 50px;
   background-color: var(--black);
   margin-top: 20px;
 }
@@ -329,6 +329,16 @@ input[type='radio']:checked::before {
   height: 3px;
   width: 100%;
   margin: 20px auto;
+}
+
+.artpage-break {
+  height: 3px;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.artpage-break:first-of-type {
+  margin: 30px auto;
 }
 
 .contact-title {

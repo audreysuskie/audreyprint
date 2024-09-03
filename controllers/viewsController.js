@@ -55,24 +55,6 @@ exports.contactPage = catchAsync(async (req, res) => {
   });
 });
 
-exports.billingPage = catchAsync(async (req, res) => {
-  res.status(200).render('billing', {
-    title: 'Billing Page',
-  });
-});
-
-exports.shippingPage = catchAsync(async (req, res) => {
-  res.status(200).render('shipping', {
-    title: 'Shipping Page',
-  });
-});
-
-exports.savedPage = catchAsync(async (req, res) => {
-  res.status(200).render('saved', {
-    title: 'Saved Items',
-  });
-});
-
 exports.filterPage = catchAsync(async (req, res) => {
   const products = await Product.find(req.query);
 
@@ -199,6 +181,12 @@ exports.vectorPage = catchAsync(async (req, res) => {
 exports.digitizingPage = catchAsync(async (req, res) => {
   res.status(200).render('digitizing', {
     title: 'Digitizing',
+  });
+});
+
+exports.artservicePage = catchAsync(async (req, res) => {
+  res.status(200).render('artservice', {
+    title: 'Art Services',
   });
 });
 

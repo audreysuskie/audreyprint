@@ -43,41 +43,13 @@ router.get('/vector', viewsController.vectorPage);
 
 router.get('/digitizing', viewsController.digitizingPage);
 
+router.get('/artservice', viewsController.artservicePage);
+
 router.get('/login', viewsController.getLoginForm);
 
 router.get('/signup', viewsController.getSignupForm);
 
 router.get('/logout', authController.logout);
-
-router.get(
-  '/billing',
-  authController.isLoggedIn,
-  authController.protect,
-  authController.restrictTo('admin', 'user'),
-  viewsController.billingPage
-);
-router.get(
-  '/shipping',
-  authController.isLoggedIn,
-  authController.protect,
-  authController.restrictTo('admin', 'user'),
-  viewsController.shippingPage
-);
-router.get(
-  '/saved',
-  authController.isLoggedIn,
-  authController.protect,
-  authController.restrictTo('admin', 'user'),
-  viewsController.savedPage
-);
-
-// router.get(
-//   '/orders',
-//   authController.isLoggedIn,
-//   authController.protect,
-//   authController.restrictTo('admin', 'user'),
-//   viewsController.ordersPage
-// );
 
 router.get(
   '/account',
