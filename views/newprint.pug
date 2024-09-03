@@ -1,0 +1,122 @@
+extends newbase
+
+block content
+  html
+    .content
+      .page-content-container
+        .page
+          h1.left Full Service Printing
+          img.right-page-image(src="/images/page_image-01.png")
+          .content-text
+            | Years of printing experience and a skilled art background makes
+            | AUDREY Design &#38; Print Studio an excellent choice for your
+            | printwear needs. We can print any design on any item, material, or
+            | color with careful precision and attention to detail. Using the
+            | latest technology, art, and printing techniques, all of our prints
+            | maintain incredible quality, color, and durability.
+          .content-text
+            .content-head Full Service Printing Includes:
+            ul.content-text
+              li 
+                span.bold PRINTWEAR SUPPLY: 
+                | We will provide you with options and assist you in choosing the right printwear for your 
+                | needs. The cost of printwear will be included in your Full Service Printing quote.
+              li 
+                span.bold ART FILE REVIEW: 
+                | Your art files will be reviewed for color matching and any potential printing issues at no extra cost.
+              li 
+                span.bold PRE-PRINT PROOFS AND COMPS FOR YOUR APPROVAL:  
+                | You will be supplied art proofs and comps so you can review your print as it will appear the selected printwear prior to printing. 
+          .content-text
+              | Print full color images with no limits on colors, no added art
+              | fees, and no minimums. Just email your artwork and job specifications or give us a call and we&apos;ll be
+              | happy to provide you with a quote or answer any questions.
+          .page-break
+          form#calc-form.calculator
+            .results-page-title Cost Calculator
+            .content-text Use the calculator below to estimate your cost per print including the cost of printwear/blanks, 
+              | single image transfers, and impressions. Quantity discounts will apply.
+            .row
+              .group
+                label.calculator-label(for="quantity") Quantity to be Printed:
+                input.calc-form(id="quantity" name="quantity" type="number" placeholder="no minimums" required)
+              .group
+                label.calculator-label(for="blanks") Printwear/Blanks Price (each):  
+                input.calc-form(id="blanks" name="blanks" type="number" placeholder="0.00" step="0.01" required)
+            .row 
+              .group
+                label.calculator-label Image Print Size (inches):
+                .row
+                  input.calc-form(id="width" name="width" type="number" placeholder="width" step="0.001" min="0" required)
+                  label x
+                  input.calc-form(id="height" name="height" type="number" placeholder="height" step="0.001" min="0" required)           
+              .group 
+                label.calculator-label(for="tax-exempt") Tax-Exempt:
+                .radio-row
+                  .radio-row
+                    input(type="radio" id="exempt" name="tax-exempt" value="Exempt" checked)
+                    label(for="exempt") Yes
+                  .radio-row
+                    input(type="radio" id="notexempt" name="tax-exempt" value="Not Exempt")
+                    label(for="notexempt") No
+                #tax-note Tax will vary based on your state and/or county. Orange County, CA tax rate will apply to quote. Actual tax rate will be determined when order is processed.
+            .row
+              button.submit.btn.btn-primary Calculate
+            #results       
+              .results-page-title Your Quote 
+              .content-text The quote below is estimated and does not constitute a firm quote. Pricing is based on the information provided and may change as specifications change. This estimate does not include shipping and handling charges which may apply.
+              .results-row
+                .results-header.center-align Qty      
+                .results-header Item Description     
+                .results-header.center-align Cost Each     
+                .results-header.center-align Item Total     
+              
+                .results-group
+                  input.center(id="transferQty" type="text" value="" readonly)      
+                .results-group
+                  input(id="dimensions" type="text" value="" readonly)     
+                .results-group
+                  input.center(id="transferEach" type="text" value="" readonly)   
+                .results-group.right-align
+                  input(id="transferCost" type="text" value="" readonly) 
+              
+                .results-group
+                  input.center(id="impressionsQty" type="text" value="" readonly)
+                .results-group
+                  input(id="location" type="text" value="" readonly)
+                .results-group 
+                  input.center(type="text" value="1.00" readonly)   
+                .results-group.right-align
+                  input(id="impressionsCost" type="text" value="" readonly)
+                    
+              
+                .results-group
+                  input.center(id="garmentsQty" type="text" value="" readonly)
+                .results-group 
+                  input(type="text" value="Printwear/Blanks" readonly)  
+                .results-group
+                  input.center(id="garmentsEach" type="text" value="" readonly)    
+                .results-group.right-align
+                  input(id="garmentsCost" type="text" value="" readonly)     
+              .results-break  
+              .results-row
+                .results-group      
+                .results-group      
+                .results-header.right-align
+                  span Sub-total: 
+                .results-group.right-align 
+                  input(id="subtotal" type="text" value="$0.00" readonly) 
+                .results-group      
+                .results-group      
+                .results-header.right-align 
+                  span#tax-rate 7.75
+                  | % Tax:
+                .results-group.right-align 
+                  input(id="tax" type="text" value="0.00" readonly)
+                .results-group      
+                .results-group      
+                .results-header.right-align
+                  span Total: 
+                .results-group.right-align 
+                  input(id="total" type="text" value="$0.00" readonly) 
+              #resultsDiv

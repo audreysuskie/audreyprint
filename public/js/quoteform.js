@@ -160,13 +160,13 @@ if (quoteForm) {
     if (notax === true) {
       taxRate = 0;
     }
-    let location = '';
-    var ele = document.getElementsByClassName('location');
-    for (i = 0; i < ele.length; i++) {
-      if (ele[i].checked) {
-        location = ele[i].value;
-      }
-    }
+    // let location = '';
+    // var ele = document.getElementsByClassName('location');
+    // for (i = 0; i < ele.length; i++) {
+    //   if (ele[i].checked) {
+    //     location = ele[i].value;
+    //   }
+    // }
 
     const totalSqInches = width * height;
 
@@ -202,8 +202,8 @@ if (quoteForm) {
 
     const discountedPricePerSqInch = pricePerSqInch - pricePerSqInch * discount;
     const pricePerTransfer = totalSqInches * discountedPricePerSqInch;
-    const discountedTransfers = pricePerTransfer - pricePerTransfer * 0.25;
-    const transferCost = discountedTransfers * quantity;
+    const discountedTransfers = pricePerTransfer - pricePerTransfer * 0;
+    const transferCost = pricePerTransfer * quantity;
     const impressionsCost = 1.0 * quantity;
     const garmentTotal = blanksPrice * quantity;
     const subtotal = transferCost + impressionsCost + garmentTotal;
@@ -212,11 +212,9 @@ if (quoteForm) {
 
     document.getElementById('transferQty').value = quantity;
     document.getElementById('impressionsQty').value = quantity;
-    document.getElementById('location').value =
-      location + ' - Transfer Applications';
+    document.getElementById('location').value = 'Transfer Applications';
     document.getElementById('garmentsQty').value = quantity;
-    document.getElementById('transferEach').value =
-      discountedTransfers.toFixed(2);
+    document.getElementById('transferEach').value = pricePerTransfer.toFixed(2);
     document.getElementById('transferCost').value = transferCost.toFixed(2);
     document.getElementById('impressionsCost').value =
       impressionsCost.toFixed(2);
@@ -226,10 +224,7 @@ if (quoteForm) {
     document.getElementById('tax').value = tax.toFixed(2);
     document.getElementById('total').value = '$' + totalPrice.toFixed(2);
     document.getElementById('dimensions').value =
-      width +
-      '" wide x ' +
-      height +
-      '" tall Single Image Transfers (includes 25% discount)';
+      width + '" wide x ' + height + '" tall Single Image Transfers';
     document.getElementById('tax-rate').textContent = taxRate * 100;
     document.getElementById('resultsDiv').scrollIntoView();
   });

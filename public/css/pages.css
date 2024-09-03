@@ -14,10 +14,15 @@
 .content {
   width: 100vw;
   min-height: 85vh;
-  padding: 19vh 6vw 6vh 6vw;
+  padding: 19vh 0vw 6vh 0vw;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.page-content-container {
+  width: 100%;
+  background-color: var(--offblack);
 }
 
 .page {
@@ -25,7 +30,6 @@
   max-width: 1120px;
   width: 100%;
   background-color: var(--offblack);
-  border: 1px solid white;
   padding: 50px;
   color: white;
 }

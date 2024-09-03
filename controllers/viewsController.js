@@ -185,8 +185,8 @@ exports.transfersPage = catchAsync(async (req, res) => {
 });
 
 exports.printPage = catchAsync(async (req, res) => {
-  res.status(200).render('print', {
-    title: 'Printed Apparel',
+  res.status(200).render('newprint', {
+    title: 'Full Service Printing',
   });
 });
 
