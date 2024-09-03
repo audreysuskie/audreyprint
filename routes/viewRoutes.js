@@ -15,6 +15,8 @@ router.get('/dtf', viewsController.dtfPage);
 
 router.get('/contact', viewsController.contactPage);
 
+router.get('/messages', viewsController.allMessages);
+
 router.get('/dtfcare', viewsController.applicationPage);
 
 router.get('/forgotpassword', viewsController.forgotPasswordForm);

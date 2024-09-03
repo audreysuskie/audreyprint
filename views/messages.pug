@@ -1,0 +1,47 @@
+extends newbase
+
+block content
+  .page-container
+    .dashboard-container
+      .dash-wrap
+        include _dashboardnav
+        .dashboard
+          if user.role == 'admin'
+            h1 Admin Dashboard
+          else
+            h1= `${user.name.firstName}'s Account`
+          .account-sections
+            h2 Received Messages      
+            if messages.length == 0
+              .profile-item No message to display.
+            else    
+              for message in messages
+                .message-container
+                  .message-grid
+                    h3 Date/Time Received: 
+                      | 
+                      p= `${message.date} at ${message.time}`
+                    h3 Name: 
+                      | 
+                      p= message.name.firstName + " " + message.name.lastName
+                    h3 Email:
+                      | 
+                      p= message.email
+                    h3 Phone: 
+                      | 
+                      p= message.phone
+                  if message.requestType == 'Send A Message'
+                    h3 Subject:
+                      | 
+                      p= `Message Regarding ${message.service}`
+                  if message.requestType == 'Order Inquiry'
+                    h3 Subject:
+                      | 
+                      p= `Order Inquiry for ${message.service}`
+                  if message.requestType == 'Quote Request'
+                    h3 Subject:
+                      | 
+                      p= `Quote Request for ${message.service}`
+                  h3 Message:
+                    p= message.message
+                  .page-break

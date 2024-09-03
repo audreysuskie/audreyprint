@@ -49,8 +49,8 @@ module.exports = class Message {
     });
 
     const mailOptions = {
-      from: this.from,
-      to: this.to,
+      from: this.to,
+      to: this.from,
       subject,
       html,
     };
@@ -60,11 +60,8 @@ module.exports = class Message {
 
   async sendMessage() {
     await this.send(
-      'message',
-      'You have received a new message from ' +
-        this.firstName +
-        ' ' +
-        this.lastName
+      'messageConfirm',
+      'Thank you for contacting Audrey Design & Print Studio.'
     );
   }
 };

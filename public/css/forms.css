@@ -303,6 +303,64 @@ input[type='radio']:checked::before {
   font-weight: 600;
 }
 
+#message-form {
+  width: 100%;
+}
+
+.contact-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-column {
+  width: 50%;
+  text-align: center;
+}
+
+.page-break {
+  height: 3px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.contact-title {
+  font-size: 1.5rem;
+}
+
+.contact-title a {
+  transition: 0.5s ease;
+}
+
+.contact-title a:hover {
+  scale: 1.1;
+  color: var(--red);
+}
+
+.message-input {
+  width: 100%;
+  background-color: var(--black);
+  color: white;
+  border: 1px solid var(--offwhite);
+  height: 45px;
+  border-radius: 3px;
+  padding: 5px 15px;
+  margin: 7px 0px;
+  font-size: 1.05rem;
+}
+
+.message-area {
+  width: 100%;
+  background-color: var(--black);
+  color: white;
+  border: 1px solid var(--offwhite);
+  border-radius: 3px;
+  padding: 5px 15px;
+  margin: 7px 0px;
+  font-size: 1.05rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
 @media only screen and (max-width: 900px) {
   .three-column,
   .two-column {

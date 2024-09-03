@@ -1,0 +1,25 @@
+extends baseMessage
+
+block content
+  p Thank you for contacting Audrey Design &#38; Print Studio. 
+    | We will respond to your message via your preferred contact method as soon as possible.
+  p A copy of your message is included below.
+  hr
+  p Date/Time Received: 
+    | 
+    span #{date} at #{time}
+  p Name: 
+    | 
+    span #{firstName} #{lastName}
+  p Email:
+    | 
+    span #{email}
+  p Phone: 
+    | 
+    span #{phone}
+  p Subject:
+    | 
+    span #{requestType} for #{service}
+  p Message:
+  p
+    span #{message}

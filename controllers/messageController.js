@@ -4,11 +4,13 @@ const catchAsync = require('../utils/catchAsync');
 const factory = require('./handlerFactory');
 const AppError = require('../utils/appError');
 const Email = require('../utils/messagemail');
+const Email2 = require('../utils/messageconfirm');
 
 exports.createMessage = catchAsync(async (req, res, next) => {
   const newMessage = await Message.create(req.body);
 
   await new Email(newMessage).sendMessage();
+  await new Email2(newMessage).sendMessage();
 
   res.status(201).json({
     status: 'success',
