@@ -37,13 +37,11 @@ router.get('/thankyou', viewsController.thankyouPage);
 
 router.get('/print', viewsController.printPage);
 
-router.get('/transfers', viewsController.transfersPage);
-
 router.get('/graphic', viewsController.graphicPage);
 
-router.get('/transfersheet', viewsController.transfersheetPage);
-
 router.get('/vector', viewsController.vectorPage);
+
+router.get('/digitizing', viewsController.digitizingPage);
 
 router.get('/login', viewsController.getLoginForm);
 

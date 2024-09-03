@@ -78,6 +78,10 @@ a {
   display: block;
 }
 
+span > a {
+  display: inline;
+}
+
 html {
   font-size: 16px;
 }
@@ -455,7 +459,8 @@ h2 {
   font-size: 1rem;
   color: rgb(198, 198, 198);
   text-align: left;
-  line-height: 190%;
+  line-height: 180%;
+  letter-spacing: 0.5px;
   margin-block-start: 20px;
   margin-block-end: 20px;
 }

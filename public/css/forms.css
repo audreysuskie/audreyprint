@@ -253,6 +253,11 @@ input[type='radio']:checked::before {
   grid-template-columns: auto auto auto;
 }
 
+.grid2 {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
 .calculator-label {
   font-size: 1.2rem;
   color: white;

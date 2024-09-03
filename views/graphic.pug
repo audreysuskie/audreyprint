@@ -1,83 +1,32 @@
-extends lpbase
+extends newbase
 
 block content
-  .wrapper
-  .content.brick-fill
-    .contentContainer
-      .contentFrame
-        .page-div
-          .content-header-title Graphic Design Services
-          img.right-page-image(src="/images/page_image-03.png" style="margin-top: 10px;")
-          .content-text
-            | Audrey Designs has been providing graphic art services for many
-            | years, specializing in visual communication through both printed
-            | and digital mediums. Services include custom art design,
-            | rendering, illustration, photography, photo modification,
-            | digital color separation, raster art file vectorization, as well
-            | as reproduction and restoration of existing art.
-          .list
-            .content-listitem DESIGNS FOR:
-            ul.columnList
-              div
-                li.content-listitem Printed Apparel
-                li.content-listitem Embroidery
-                li.content-listitem Logos
-                li.content-listitem Business Cards
-                li.content-listitem Invitations
-              div
-                li.content-listitem Brochures
-                li.content-listitem Marketing Materials
-                li.content-listitem Packaging
-                li.content-listitem Web &amp; Email Marketing
-                li.content-listitem and more...
-          .content-text
-            | With every project, we work tirelessly to meet or exceed your custom design expectations.
-            | Let us help you create something you will love and can be proud of for years to come. 
-        .page-break
-        form#message-form
-          .content-title Need Graphic Design Services?
-          .content-text Send me a message and let me know how I can help.
-          .hidden
-            .form-row
-              .form-group
-                label.form-label(for='requestType') What are you inquiring about?
-                select.form-input(name='requestType' id='requestType' required) 
-                 option(value='Send A Message' selected) Send A Message
-              .form-group
-                label.form-label(for='service') What service do you need?
-                select.form-input(name='service' id='service' required) 
-                  option(value='Graphic Design' selected) Graphic Design
-                  
-          .form-group
-            .form-row
-              .form-group
-                label.form-label(for='firstName') First Name
-                input.form-input(id='firstName', type='text', required)
-              .form-group
-                label.form-label(for='lastName') Last Name
-                input.form-input(id='lastName', type='text', required)
-          .form-group
-            .form-row
-              .form-group
-                label.form-label(for='email') Email
-                input.form-input(id='email', type='email', required)
-              .form-group
-                label.form-label(for='messagePhone') Phone
-                input.form-input(id="messagePhone" name='messagePhone' type='text' placeholder='Please enter a phone number' value='')
-          .form-group
-            label.form-label Preferred Contact Method:
-            .form-radio-row
-              .radio-group
-                input(type="radio" id="viaemail" name="contactmethod" value="Email" checked)
-                label.form-label(for="viaemail") Email
-              .radio-group
-                input(type="radio" id="viaphone" name="contactmethod" value="Phone")
-                label.form-label(for="viaphone") Phone
+  .content
+    .page-content-container
+      .page
+        h1 Graphic Design Services
+        .content-text
+          img.right-page-image(src="/images/graphic_image.png")
+          | Audrey Designs has been providing graphic art services for over 25
+          | years, specializing in visual communication through both printed
+          | and digital mediums. Services include custom art design,
+          | rendering, illustration, photography, photo modification,
+          | digital color separation, raster art file vectorization, as well
+          | as reproduction and restoration of existing art.
+        h3 DESIGNS FOR
+        ul.list.grid2
+          li Printed Apparel
+          li Embroidery
+          li Logos
+          li Business Cards
+          li Invitations
+          li Brochures
+          li Marketing Materials
+          li Packaging
+          li Web &amp; Email Marketing
+          li and more...
 
-          .form-group
-              label.form-label(for='message') Message
-              textarea.form-input(rows="7" id="message" name='message' form='message-form' placeholder='Enter your message here' required)
-          .form-group
-            .button-container
-              button.submitButton.submit.form-button Send Message
+        .content-text
+          | With every project, we work tirelessly to meet or exceed your custom design expectations.
+          | Let us help you create something you will love and can be proud of for years to come. 
 

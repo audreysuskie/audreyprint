@@ -178,12 +178,6 @@ exports.garmentsPage = catchAsync(async (req, res) => {
   });
 });
 
-exports.transfersPage = catchAsync(async (req, res) => {
-  res.status(200).render('transfers', {
-    title: 'Printed Transfers',
-  });
-});
-
 exports.printPage = catchAsync(async (req, res) => {
   res.status(200).render('newprint', {
     title: 'Full Service Printing',
@@ -196,15 +190,15 @@ exports.graphicPage = catchAsync(async (req, res) => {
   });
 });
 
-exports.transfersheetPage = catchAsync(async (req, res) => {
-  res.status(200).render('transfersheet', {
-    title: 'Transfer Sheet Layup',
-  });
-});
-
 exports.vectorPage = catchAsync(async (req, res) => {
   res.status(200).render('vector', {
     title: 'Vector Conversion',
+  });
+});
+
+exports.digitizingPage = catchAsync(async (req, res) => {
+  res.status(200).render('digitizing', {
+    title: 'Digitizing',
   });
 });
 
