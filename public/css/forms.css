@@ -310,6 +310,9 @@ input[type='radio']:checked::before {
 
 #message-form {
   width: 100%;
+  padding: 20px 50px;
+  background-color: var(--black);
+  margin-top: 20px;
 }
 
 .contact-row {
@@ -343,25 +346,27 @@ input[type='radio']:checked::before {
 
 .message-input {
   width: 100%;
-  background-color: var(--black);
+  background-color: var(--offblack);
   color: white;
   border: 1px solid var(--offwhite);
   height: 45px;
   border-radius: 3px;
   padding: 5px 15px;
   margin: 7px 0px;
-  font-size: 1.05rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
 }
 
 .message-area {
   width: 100%;
-  background-color: var(--black);
+  background-color: var(--offblack);
   color: white;
   border: 1px solid var(--offwhite);
   border-radius: 3px;
   padding: 5px 15px;
   margin: 7px 0px;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
 }
