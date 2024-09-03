@@ -55,13 +55,9 @@ block content
               input.message-input(id="messagePhone" name='messagePhone' type='text' placeholder='Please enter a phone number' value='')
           .group
             label.message-label Preferred Contact Method:
-            .radio-row
-              .radio-row
-                input(type="radio" id="viaemail" name="contactmethod" value="Email" checked)
-                label.message-label(for="viaemail") Email
-              .radio-row
-                input(type="radio" id="viaphone" name="contactmethod" value="Phone")
-                label.message-label(for="viaphone") Phone
+            select.message-input(name='contactmethod' id='contactmethod' required) 
+                option(value='email' selected) Email
+                option(value='phone') Phone
 
           .row
             .group(style="width: 100%")

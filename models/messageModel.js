@@ -27,6 +27,8 @@ const messageSchema = new mongoose.Schema({
   service: { type: String },
 
   message: { type: String },
+
+  contactMethod: { type: String },
 });
 
 const Message = mongoose.model('Message', messageSchema);

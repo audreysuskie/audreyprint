@@ -13,6 +13,7 @@ module.exports = class Message {
     this.service = message.service;
     this.requestType = message.requestType;
     this.message = message.message;
+    this.contact = message.contactMethod;
     this.to = `Audrey Design & Print Studio<${process.env.EMAIL_ADMIN}>`;
   }
 
@@ -42,6 +43,7 @@ module.exports = class Message {
       date: this.date,
       time: this.time,
       email: this.from,
+      contact: this.contact,
       service: this.service,
       requestType: this.requestType,
       message: this.message,

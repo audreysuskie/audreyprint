@@ -10622,9 +10622,7 @@
       const requestType = document.getElementById("requestType").value;
       const service = document.getElementById("service").value;
       const message = document.getElementById("message").value;
-      const contactMethod = document.querySelector(
-        'input[name="contactmethod"]:checked'
-      ).value;
+      const contactMethod = document.getElementById("contactmethod").value;
       const name = { firstName, lastName };
       newMessage(
         date,
