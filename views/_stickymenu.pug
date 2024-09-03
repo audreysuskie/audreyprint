@@ -17,17 +17,14 @@
         input.service#embroidery(type='radio', name='service', value='Embroidery')
         label(for='embroidery') Embroidery
       .radio-row
-        input.service#gang(type='radio', name='service', value='Transfer Gang Sheets')
-        label(for='gang') Transfer Gang Sheets
-      .radio-row
         input.service#graphic(type='radio', name='service', value='Graphic design')
         label(for='graphic') Graphic Design
       .radio-row
         input.service#vector(type='radio', name='service', value='Vector Conversion')
         label(for='vector') Vector Conversion
       .radio-row
-        input.service#web(type='radio', name='service', value='Web Page Design')
-        label(for='web') Web Page Design
+        input.service#digitizing(type='radio', name='service', value='Digitizing')
+        label(for='digitizing') Digitizing
       .radio-row
         input.service#other(type='radio', name='service', value='Other')
         label(for='other') Other (please describe below)
@@ -63,8 +60,8 @@
     .form-row
       input#companyname.form-class(type='text', name='companyname', placeholder='Company Name' autocomplete='company')
     .form-row
-      input#firstname.form-class(type='text', name='firstname', placeholder='First Name' autocomplete='first' required)
-      input#lastname.form-class(type='text', name='lastname', placeholder='Last Name' autocomplete='last' required)
+      input#firstname.form-class(type='text', name='firstname', placeholder='First Name' autocomplete='firstname' required)
+      input#lastname.form-class(type='text', name='lastname', placeholder='Last Name' autocomplete='lastname' required)
     .form-row
       input#quoteemail.form-class(type='email', name='Email', placeholder='Email' autocomplete='email' required)
       input#phone.form-class(type='tel', name='Phone', placeholder='Phone Number' autocomplete='phone' required)
