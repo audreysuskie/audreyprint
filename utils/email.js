@@ -8,7 +8,7 @@ module.exports = class Email {
     this.firstName = user.name.firstName;
     this.token = url.split('resetPassword/')[1];
     this.tokenUrl = url.split('api/')[0];
-    this.from = `Audrey Design and Print Studio<${process.env.EMAIL_FROM}>`;
+    this.from = `Audrey Design & Print Studio<${process.env.EMAIL_FROM}>`;
   }
 
   newTransport() {

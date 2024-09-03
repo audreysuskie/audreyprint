@@ -87,7 +87,7 @@ exports.protect = catchAsync(async (req, res, next) => {
   if (!token) {
     return next(
       new AppError(
-        'You are not logged in. You need to login or create an account to access this page. If the problem persists, please contact us.',
+        'You are not logged in. You need to login or create an account to access this page.',
         401
       )
     );

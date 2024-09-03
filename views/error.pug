@@ -1,12 +1,14 @@
-extends lpbase
+extends newbase
 
 block content
-  .wrapper
-    .content 
-      .contentContainer
+  .content
+    .page-content-container
+      .page
         .error
-          img.error_img(src="/images/x-icon.png")
+          .image-row
+            img.page-emoji.error_img(src="/images/emoji_error.png")
           .error__title
             h2.heading-secondary.heading-secondary--error Oh no! Something went wrong. 
-          .error__msg= msg + '. Please contact us directly and we will try to help you out the old fashioned way.'
+          .error__msg
+            .content-text.center= msg + ' If the problem persists, please contact us directly and we will try to help you out the old fashioned way.'
         
