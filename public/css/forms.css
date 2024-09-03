@@ -361,6 +361,15 @@ input[type='radio']:checked::before {
   font-weight: 300;
 }
 
+.message-label {
+  font-size: 1.2rem;
+}
+
+#message-form .row {
+  margin-block-start: 10px;
+  margin-block-end: 10px;
+}
+
 @media only screen and (max-width: 900px) {
   .three-column,
   .two-column {
