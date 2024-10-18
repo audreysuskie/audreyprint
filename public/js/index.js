@@ -219,16 +219,25 @@ if (signup) {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     const passwordConfirm = document.getElementById('passwordConfirm').value;
+    const tandc = document.querySelector('input[name="tandc"]:checked').value;
 
-    createaccount(
-      customerNumber,
-      firstName,
-      lastName,
-      company,
-      email,
-      password,
-      passwordConfirm
-    );
+    if (tandc === 'Yes') {
+      console.log('Cancelled signup');
+      showAlert('success', 'New user account created successfully');
+      window.setTimeout(() => {
+        location.assign('/');
+      }, 1500);
+    } else {
+      createaccount(
+        customerNumber,
+        firstName,
+        lastName,
+        company,
+        email,
+        password,
+        passwordConfirm
+      );
+    }
   });
 }
 

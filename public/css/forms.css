@@ -16,7 +16,6 @@
   position: fixed;
   right: 0;
   top: 0;
-  display: none;
   justify-content: center;
   align-items: center;
   z-index: 6;
@@ -25,13 +24,14 @@
   color: var(--offblack);
   height: 100vh;
   width: 100vw;
-  overflow: scroll;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #quoteForm {
+  position: relative;
   margin: auto;
   display: none;
   width: 90vw;
@@ -415,5 +415,50 @@ input[type='radio']:checked::before {
 
   .form-class {
     min-height: 0px;
+  }
+
+  .row {
+    flex-direction: column;
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+  }
+
+  .group {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .group input[type='number'] {
+    width: 100%;
+    height: 35px;
+    margin: 3px 7px;
+  }
+
+  .calculator {
+    padding: 30px 20px 10px 20px;
+    margin: 0px auto;
+  }
+
+  .calculator-label {
+    margin: 3px 0px;
+  }
+
+  .grid2 {
+    grid-template-columns: auto;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-column {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #message-form {
+    padding: 5px 20px;
   }
 }

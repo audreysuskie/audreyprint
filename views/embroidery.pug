@@ -5,47 +5,46 @@ block content
     .content
       .page-content-container
         .page
-          h1.left Full Service Printing
+          h1.left Embroidery
           .content-text
-            img.right-page-image(src="/images/page_image-01.png")
-            | Years of printing experience and a skilled art background makes
-            | Audrey Design &#38; Print Studio an excellent choice for your
-            | printwear needs. We can print any design on any item, material, or
-            | color with careful precision and attention to detail. Using the
-            | latest technology, art, and printing techniques, all of our prints
-            | maintain incredible quality, color, and durability.
+            img.right-page-image(src="/images/embroidery_image2.png")
+            | Quality embroidery depends heavily on the skill and creativity of the operator. 
+            | Because of our extensive background in art and design, Audrey Design &#38; Print Studio is an excellent choice for your
+            | embroidery and digitizing needs. We can embroider any design on various sorts of apparel such as hats, bags, t-shirts, 
+            | and many more. With careful precision and attention to detail, our embroidery stands out with the type of quality you 
+            | expect from a well made embroidered piece.
           .content-text
-            .content-head Full Service Printing Includes:
+            .content-head Embroidery Service Includes:
             ul.content-text
               li 
-                span.bold PRINTWEAR SUPPLY: 
-                | We will provide you with options and assist you in choosing the right printwear for your 
-                | needs. The cost of printwear will be included in your Full Service Printing quote.
+                span.bold BLANKS SUPPLY: 
+                | We will provide you with options and assist you in choosing the right blanks for your 
+                | project. The cost of blanks will be included in your Embroidery quote.
               li 
                 span.bold ART FILE REVIEW: 
-                | Your art files will be reviewed for color matching and any potential printing issues at no extra cost.
+                | Your art files will be reviewed for color matching and any potential issues at no extra cost.
               li 
                 span.bold PRE-PRINT PROOFS AND COMPS FOR YOUR APPROVAL:  
-                | You will be supplied art proofs and comps so you can review your print as it will appear the on the selected printwear prior to printing. 
+                | You will be supplied art proofs and comps so you can review your project as it will appear on 
+                | the selected printwear prior to printing. 
           .content-text
-              | Print full color images with no limits on colors, no added art
-              | fees, and no minimums. Just email your artwork and job specifications or give us a call and we&apos;ll be
+              | Just email your artwork and job specifications or give us a call and we&apos;ll be
               | happy to provide you with a quote or answer any questions.
           .page-break
-          form#calc-form.calculator
+          form#emb-calc-form.calculator.hidden
             .results-page-title Cost Calculator
-            .content-text Use the calculator below to estimate your cost per print including the cost of printwear/blanks, 
-              | single image transfers, and impressions. Quantity discounts will apply.
+            .content-text Use the calculator below to estimate your embroidery cost including the cost of 
+              | printwear/blanks plus the embroidered artwork. Digitizing will be quoted separately.
             .row
               .group
-                label.calculator-label(for="quantity") Quantity to be Printed:
+                label.calculator-label(for="quantity") Quantity to be Embroidered:
                 input.calc-form(id="quantity" name="quantity" type="number" placeholder="no minimums" required)
               .group
                 label.calculator-label(for="blanks") Printwear/Blanks Price (each):  
                 input.calc-form(id="blanks" name="blanks" type="number" placeholder="0.00" step="0.01" required)
             .row 
               .group
-                label.calculator-label Image Print Size (inches):
+                label.calculator-label Image Size (inches):
                 .row
                   input.calc-form(id="width" name="width" type="number" placeholder="width" step="0.001" min="0" required)
                   label x
@@ -79,17 +78,16 @@ block content
                   input.center(id="transferEach" type="text" value="" readonly)   
                 .results-group.right-align
                   input(id="transferCost" type="text" value="" readonly) 
-              
+
                 .results-group
-                  input.center(id="impressionsQty" type="text" value="" readonly)
+                  input.center(id="digitizingQty" type="text" value="1" readonly)
                 .results-group
-                  input(id="location" type="text" value="" readonly)
+                  input(id="digitizing" type="text" value="" readonly)
                 .results-group 
-                  input.center(type="text" value="1.00" readonly)   
+                  input.center(id="digitizingEach" type="text" value="" readonly)   
                 .results-group.right-align
-                  input(id="impressionsCost" type="text" value="" readonly)
-                    
-              
+                  input(id="digitizingCost" type="text" value="" readonly)
+                            
                 .results-group
                   input.center(id="garmentsQty" type="text" value="" readonly)
                 .results-group 

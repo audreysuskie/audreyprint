@@ -416,4 +416,25 @@ span.address {
     margin-right: 0px;
     width: 100%;
   }
+
+  .dashboard-menu-item {
+    padding: 10px;
+  }
+
+  .dashboard-menu-item span {
+    display: none !important;
+  }
+
+  .dashboard-menu-link {
+    padding: 10px;
+  }
+
+  .last {
+    display: none;
+  }
+
+  .message-grid,
+  .quote-request {
+    display: block;
+  }
 }

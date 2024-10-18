@@ -45,6 +45,8 @@ router.get('/digitizing', viewsController.digitizingPage);
 
 router.get('/artservice', viewsController.artservicePage);
 
+router.get('/embroidery', viewsController.embroideryPage);
+
 router.get('/login', viewsController.getLoginForm);
 
 router.get('/signup', viewsController.getSignupForm);

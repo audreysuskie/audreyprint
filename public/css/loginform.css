@@ -140,6 +140,10 @@
   margin: 1rem 0px;
 }
 
+.tandc {
+  display: none;
+}
+
 .form-label {
   font-size: 1.2rem;
   font-weight: 400;
@@ -787,10 +791,6 @@
 
   .radio-grid {
     grid-template-columns: auto auto;
-  }
-
-  .calculator {
-    padding: 0px 10px 20px 10px;
   }
 
   .results-row {

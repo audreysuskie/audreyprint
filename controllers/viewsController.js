@@ -190,6 +190,12 @@ exports.artservicePage = catchAsync(async (req, res) => {
   });
 });
 
+exports.embroideryPage = catchAsync(async (req, res) => {
+  res.status(200).render('embroidery', {
+    title: 'Embroidery Services',
+  });
+});
+
 exports.getLoginForm = (req, res) => {
   res.status(200).render('login', {
     title: 'Log in to your Account',

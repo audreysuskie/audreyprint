@@ -23,6 +23,15 @@ block content
           .form-group
             label.form-label(for='email') Email
             input.form-input(id='email', type='email', required)
+          .tandc.form-group
+            label.form-label Terms & Conditions
+            .radio-group
+              .radio-row
+                input(type='radio', name='tandc', value='Yes')
+                label(for='tandc') Yes
+              .radio-row
+                input(type='radio', name='tandc', value='No' checked='checked')
+                label(for='tandc') No
           .form-group
             label.form-label(for='password') Password 
               span.small (a minimim of 8 characters is required)

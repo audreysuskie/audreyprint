@@ -20,15 +20,18 @@ if (notaxNote) {
   });
 }
 
-const quoteCalculator = document.getElementById('quote-calc-form');
-if (quoteCalculator) {
-  quoteCalculator.addEventListener('submit', (e) => {
+const embrioderyCalculator = document.getElementById('emb-calc-form');
+if (embrioderyCalculator) {
+  embrioderyCalculator.addEventListener('submit', (e) => {
     e.preventDefault();
     document.getElementById('results').style.display = 'block';
     const quantity = document.getElementById('quantity').value;
     const width = document.getElementById('width').value;
     const height = document.getElementById('height').value;
     const notax = document.getElementById('exempt').checked;
+    const blanks = document.getElementById('blanks').value;
+
+    const blanksPrice = parseFloat(blanks);
 
     let taxRate = 0.0775;
     if (notax === true) {
@@ -38,106 +41,69 @@ if (quoteCalculator) {
     const totalSqInches = width * height;
 
     let discount = 0;
-    if (quantity < 20) {
+    if (quantity < 50) {
       discount = 0;
-    } else if (quantity > 19 && quantity < 50) {
-      discount = 0.35;
     } else if (quantity > 49 && quantity < 100) {
-      discount = 0.448;
-    } else if (quantity > 99) {
-      discount = 0.53;
+      discount = 0.25;
+    } else if (quantity > 99 && quantity < 150) {
+      discount = 0.35;
+    } else if (quantity > 149) {
+      discount = 0.45;
     }
 
-    let pricePerSqInch = 0.07;
-    if (totalSqInches < 5) {
-      pricePerSqInch = 0.24;
-    } else if (totalSqInches >= 5 && totalSqInches < 15) {
-      pricePerSqInch = 0.22;
-    } else if (totalSqInches >= 15 && totalSqInches < 25) {
-      pricePerSqInch = 0.16;
-    } else if (totalSqInches >= 25 && totalSqInches < 49) {
-      pricePerSqInch = 0.13;
-    } else if (totalSqInches >= 49 && totalSqInches < 64) {
-      pricePerSqInch = 0.11;
-    } else if (totalSqInches >= 64 && totalSqInches < 81) {
-      pricePerSqInch = 0.1;
-    } else if (totalSqInches >= 81 && totalSqInches < 168) {
-      pricePerSqInch = 0.08;
-    } else if (totalSqInches >= 168 && totalSqInches < 204) {
-      pricePerSqInch = 0.07;
+    let pricePerSqInch = 1.55;
+
+    let stitchCount = totalSqInches * 1600;
+
+    let digitizing = 35;
+
+    if (stitchCount < 5000) {
+      digitizing = 35;
+    } else if (stitchCount < 8000) {
+      digitizing = 65;
+    } else if (stitchCount < 16000) {
+      digitizing = 85;
+    } else {
+      digitizing = (stitchCount / 1000) * 7;
     }
 
     const discountedPricePerSqInch = pricePerSqInch - pricePerSqInch * discount;
-    const pricePerTransfer = totalSqInches * discountedPricePerSqInch;
-    const subtotal = pricePerTransfer * quantity;
-    const tax = subtotal * taxRate;
-    const totalPrice = subtotal + tax;
 
-    document.getElementById('cost').textContent = pricePerTransfer.toFixed(2);
-    document.getElementById('subtotal').textContent = subtotal.toFixed(2);
-    document.getElementById('tax').textContent = tax.toFixed(2);
-    document.getElementById('total').textContent = '$' + totalPrice.toFixed(2);
-    document.getElementById('totalQuantity').textContent = quantity;
-    document.getElementById('dimensions').textContent =
-      width + '" wide x ' + height + '" tall Single Image Transfers';
-    document.getElementById('tax-rate').textContent = taxRate * 100;
-    document.getElementById('resultsDiv').scrollIntoView();
-  });
-}
+    let minimumPrice = 9;
+    let pricePerPiece = totalSqInches * discountedPricePerSqInch;
 
-const sheetquoteCalculator = document.getElementById('sheetquote-calc-form');
-if (sheetquoteCalculator) {
-  sheetquoteCalculator.addEventListener('submit', (e) => {
-    e.preventDefault();
-    document.getElementById('results').style.display = 'block';
-    const quantity = document.getElementById('quantity').value;
-    const sheetsize = document.getElementById('sheetsize').value;
-    const notax = document.getElementById('exempt').checked;
-
-    let taxRate = 0.0775;
-    if (notax === true) {
-      taxRate = 0;
+    if (totalSqInches * discountedPricePerSqInch > minimumPrice) {
+      pricePerPiece = totalSqInches * discountedPricePerSqInch;
+    } else {
+      pricePerPiece = minimumPrice;
     }
 
-    let sheetprice = 0.0;
-    if (quantity < 10 && sheetsize === '22 x 12') {
-      sheetprice = 14;
-    } else if (quantity < 10 && sheetsize === '22 x 24') {
-      sheetprice = 23;
-    } else if (quantity < 10 && sheetsize === '22 x 60') {
-      sheetprice = 51;
-    } else if (quantity < 10 && sheetsize === '22 x 120') {
-      sheetprice = 90;
-    } else if (quantity < 10 && sheetsize === '22 x 144') {
-      sheetprice = 101;
-    } else if (quantity < 10 && sheetsize === '22 x 180') {
-      sheetprice = 119;
-    } else if (quantity > 9 && sheetsize === '22 x 12') {
-      sheetprice = 12;
-    } else if (quantity > 9 && sheetsize === '22 x 24') {
-      sheetprice = 20;
-    } else if (quantity > 9 && sheetsize === '22 x 160') {
-      sheetprice = 44;
-    } else if (quantity > 9 && sheetsize === '22 x 120') {
-      sheetprice = 76;
-    } else if (quantity > 9 && sheetsize === '22 x 144') {
-      sheetprice = 86;
-    } else if (quantity > 9 && sheetsize === '22 x 180') {
-      sheetprice = 101;
-    }
-
-    const subtotal = sheetprice * quantity;
+    const totalPieceCost = pricePerPiece * quantity;
+    const garmentTotal = blanksPrice * quantity;
+    const subtotal = totalPieceCost + garmentTotal;
     const tax = subtotal * taxRate;
-    const totalPrice = subtotal + tax;
+    const totalPrice = subtotal + digitizing + tax;
 
-    document.getElementById('cost').textContent = sheetprice.toFixed(2);
-    document.getElementById('subtotal').textContent = subtotal.toFixed(2);
-    document.getElementById('tax').textContent = tax.toFixed(2);
-    document.getElementById('total').textContent =
-      '$' + totalPrice.toFixed(0) + '.00';
-    document.getElementById('totalQuantity').textContent = quantity;
-    document.getElementById('description').textContent =
-      sheetsize + ' Transfer Sheet';
+    document.getElementById('transferQty').value = quantity;
+    document.getElementById('garmentsQty').value = quantity;
+    document.getElementById('transferEach').value = pricePerPiece.toFixed(2);
+    document.getElementById('transferCost').value = totalPieceCost.toFixed(2);
+    document.getElementById('garmentsEach').value = blanksPrice.toFixed(2);
+    document.getElementById('digitizingCost').value = digitizing.toFixed(2);
+    document.getElementById('digitizingEach').value = digitizing.toFixed(2);
+    document.getElementById('digitizing').value =
+      'Digitizing: ' + stitchCount.toFixed(0) + ' stiches';
+    document.getElementById('garmentsCost').value = garmentTotal.toFixed(2);
+    document.getElementById('subtotal').value = subtotal.toFixed(2);
+    document.getElementById('tax').value = tax.toFixed(2);
+    document.getElementById('total').value = '$' + totalPrice.toFixed(2);
+    document.getElementById('dimensions').value =
+      width +
+      '" wide x ' +
+      height +
+      '" tall logo (approx. stich count = ' +
+      stitchCount.toFixed(0) +
+      ')';
     document.getElementById('tax-rate').textContent = taxRate * 100;
     document.getElementById('resultsDiv').scrollIntoView();
   });
