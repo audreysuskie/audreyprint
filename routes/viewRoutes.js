@@ -39,6 +39,8 @@ router.get('/print', viewsController.printPage);
 
 router.get('/graphic', viewsController.graphicPage);
 
+router.get('/portfolio', viewsController.portfolioPage);
+
 router.get('/vector', viewsController.vectorPage);
 
 router.get('/digitizing', viewsController.digitizingPage);

@@ -1,0 +1,39 @@
+extends newbase
+
+block content
+  .content
+    .page-content-container
+      .page 
+        h1 Portfolio of Past Projects
+        .text My portfolio represents some select design and development projects from recent years. Please scroll down to browse all of my projects or select from the menu below to view projects by project type.
+      
+        .portfolio-menu 
+           .portfolio-menu-text(name='logo') Logo Design
+           .portfolio-menu-text(name='print') Print Design
+           .portfolio-menu-text(name='web') Web Design
+           .portfolio-menu-text(name='bcs') Business Cards
+           .portfolio-menu-text(name='pack') Packaging
+            
+        .portfolio-title#logo Logo Design
+        .portfolio-container#image-container0(data-name='logo' data-count='19')
+      
+        .portfolio-title#print Print Design
+        .portfolio-container#image-container1(data-name='print' data-count='16')
+      
+        .portfolio-title#web Web Design
+        .portfolio-container#image-container2(data-name='web' data-count='10')
+      
+        .portfolio-title#bcs Business Cards
+        .portfolio-container#image-container3(data-name='bcs' data-count='6')
+      
+        .portfolio-title#pack Packaging
+        .portfolio-container#image-container4(data-name='pack' data-count='8')
+  .zoom-window.hidden
+   .zoom-content
+    #zoom-close.fa-solid.fa-xmark
+    img(id='zoom-image' src='images/logo/logo-1.png')
+    .zoom-text
+      #zoom-title Monica Scott Hairstylist Logo Design
+      #zoom-date January 2023
+      #zoom-description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel neque auctor, lobortis velit in, scelerisque lectus. Integer auctor, justo in facilisis malesuada, velit enim placerat lectus, et consectetur diam urna vel nunc.
+      #zoom-link http://www.linksite.com

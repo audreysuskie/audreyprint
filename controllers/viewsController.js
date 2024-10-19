@@ -172,6 +172,12 @@ exports.graphicPage = catchAsync(async (req, res) => {
   });
 });
 
+exports.portfolioPage = catchAsync(async (req, res) => {
+  res.status(200).render('portfolio', {
+    title: 'Past Projects',
+  });
+});
+
 exports.vectorPage = catchAsync(async (req, res) => {
   res.status(200).render('vector', {
     title: 'Vector Conversion',
